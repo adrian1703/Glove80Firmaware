@@ -71,85 +71,102 @@
         //DOVRAK KEYS
         D1: D1 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt PIPE KP_EQUAL>;
         };
 
         D2: D2 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt AMPS DOLLARAND>;
         };
 
         D3: D3 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt DOT DOT>;
         };
 
         D4: D4 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt COLON SEMI>;
         };
 
         D5: D5 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt UNDER_SCORE COMMA>;
         };
 
         D6: D6 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt SINGLE_QUOTE DOUBLE_QUOTE>;
         };
 
         D7: D7 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt SMALLER_THAN LBRACKET>;
         };
 
         D8: D8 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt LPARANTHESIS RBRACKET>;
         };
 
         D9: D9 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt RPARANTHESIS RBRACKET>;
         };
 
         D10: D10 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt GREATER_THAN RBRACKET>;
         };
 
         D11: D11 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt CARET TILDE>;
         };
 
         D12: D12 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt EXCLAMATION_MARK QUESTION_MARK>;
         };
 
         D13: D13 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt HASH UNDER_SCORE>;
         };
 
         D14: D14 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt PLUS STAR>;
         };
 
         D15: D15 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&mt MINUS SLASH>;
         };
         D16: D16 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&kp KP_SLASH>;
         };
 
         D17: D17 {
             compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>
             bindings = <&kp BACKSLASH>;
         };
     };
