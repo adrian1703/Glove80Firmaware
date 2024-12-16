@@ -142,7 +142,7 @@
          D5: D5 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt UNDER_SCORE COMMA>;
+             bindings = <&mt UNDERSCORE COMMA>;
          };
 
          D6: D6 {
