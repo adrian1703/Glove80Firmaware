@@ -154,25 +154,25 @@
          D7: D7 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt LESS_THAN LBRACKET>;
+             bindings = <&mt LESS_THAN LEFT_BRACE>;
          };
 
          D8: D8 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt LPARANTHESIS RBRACKET>;
+             bindings = <&mt LEFT_PARANTHESIS LEFT_BRACKET>;
          };
 
          D9: D9 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt RPARANTHESIS RBRACKET>;
+             bindings = <&mt RIGHT_PARANTHESIS RIGHT_BRACKET>;
          };
 
          D10: D10 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt GREATER_THAN RBRACKET>;
+             bindings = <&mt GREATER_THAN RIGHT_BRACE>;
          };
 
          D11: D11 {
