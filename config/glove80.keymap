@@ -13,19 +13,6 @@
 
 #define HYPER LC(LS(LG(LALT)))
 
-// layers
-#define DEFAULT 0
-#define UTIL 1
-#define QWERTZ 2
-#define DOVRAK 3
-#define DOVRAK_LOWER 4
-#define MACRO 5
-#define MIDDLE 6
-#define LOWER 7
-#define MAGIC 8
-#define FACTORY_TEST 9
-// custom keys for dovrak
-
 #define D1 &mt PIPE KP_EQUAL                      // | when tapped, = when  held
 #define D2 &mt AMPS DOLLAR                        // $ when tapped, & when  held
 #define D3 &kp DOT                                // . when tapped
@@ -43,6 +30,19 @@
 #define D15 &mt SLASH KP_MINUS                    // - when tapped, / when  held
 #define D16 &kp KP_SLASH                          // / when tapped
 #define D17 &kp BACKSLASH                         // \ when tapped
+// layers
+#define DEFAULT 0
+#define UTIL 1
+#define QWERTZ 2
+#define DOVRAK 3
+#define DOVRAK_LOWER 4
+#define MACRO 5
+#define MIDDLE 6
+#define LOWER 7
+#define MAGIC 8
+#define FACTORY_TEST 9
+// custom keys for dovrak
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
