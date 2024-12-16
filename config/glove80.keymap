@@ -186,7 +186,7 @@
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
            &none       &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
-           &trans      D1          D2          D3          D4          D5                                                      D6      D7          D8          D9          D10         D12
+           &trans      D1          D2          D3          D4          D5                                                      D6      &none       D8          D9          D10         D12
            &trans      &kp A       &kp O       &kp E       &kp U       &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       D13
            &caps_word  &kp Q       &kp P       &kp Y       &lower_dov  &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
            &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
