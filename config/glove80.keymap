@@ -25,21 +25,21 @@
 #define MAGIC 8
 #define FACTORY_TEST 9
 // custom keys for dovrak
-#define D1 &mt PIPE KP_EQUAL                   // | when tapped, = when  held
-#define D2 &mt AMPS DOLLARAND                  // $ when tapped, & when  held
-#define D3 &kp DOT                             // . when tapped
-#define D4 &mt COLON SEMI                      // ; when tapped, : when  held
-#define D5 &mt UNDER_SCORE COMMA               // , when tapped, _ when  held
-#define D6 &mt SINGLE_QUOTE DOUBLE_QUOTE       // ' when tapped, " when  held
-#define D7 &mt SMALLER_THAN LBRACKET           // { when tapped, < when  held
-#define D8 &mt RPARANTHESIS RBRACKET           // ) when tapped, ] when  held
-#define D9 &mt LPARANTHESIS RBRACKET           // ( when tapped, [ when  held
-#define D10 &mt GREATER_THAN RBRACKET          // } when tapped, > when  held
-#define D11 &mt CARET TILDE                    // ^ when tapped, ~ when  held
-#define D12 &mt EXCLAMATION_MARK QUESTION_MARK // ? when tapped, ! when  held
-#define D13 &mt HASH UNDER_SCORE               // _ when tapped, # when  held
-#define D14 &mt PLUS STAR                      // + when tapped, * when  held
-#define D15 &mt MINUS SLASH                    // - when tapped, / when  held
+// #define D1 &mt PIPE KP_EQUAL                   // | when tapped, = when  held
+// #define D2 &mt AMPS DOLLARAND                  // $ when tapped, & when  held
+// #define D3 &kp DOT                             // . when tapped
+// #define D4 &mt COLON SEMI                      // ; when tapped, : when  held
+// #define D5 &mt UNDER_SCORE COMMA               // , when tapped, _ when  held
+// #define D6 &mt SINGLE_QUOTE DOUBLE_QUOTE       // ' when tapped, " when  held
+// #define D7 &mt SMALLER_THAN LBRACKET           // { when tapped, < when  held
+// #define D8 &mt RPARANTHESIS RBRACKET           // ) when tapped, ] when  held
+// #define D9 &mt LPARANTHESIS RBRACKET           // ( when tapped, [ when  held
+// #define D10 &mt GREATER_THAN RBRACKET          // } when tapped, > when  held
+// #define D11 &mt CARET TILDE                    // ^ when tapped, ~ when  held
+// #define D12 &mt EXCLAMATION_MARK QUESTION_MARK // ? when tapped, ! when  held
+// #define D13 &mt HASH UNDER_SCORE               // _ when tapped, # when  held
+// #define D14 &mt PLUS STAR                      // + when tapped, * when  held
+// #define D15 &mt MINUS SLASH                    // - when tapped, / when  held
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -67,6 +67,90 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
+        };
+        //DOVRAK KEYS
+        D1: D1 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt PIPE KP_EQUAL>;
+        };
+
+        D2: D2 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt AMPS DOLLARAND>;
+        };
+
+        D3: D3 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt DOT DOT>;
+        };
+
+        D4: D4 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt COLON SEMI>;
+        };
+
+        D5: D5 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt UNDER_SCORE COMMA>;
+        };
+
+        D6: D6 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt SINGLE_QUOTE DOUBLE_QUOTE>;
+        };
+
+        D7: D7 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt SMALLER_THAN LBRACKET>;
+        };
+
+        D8: D8 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt LPARANTHESIS RBRACKET>;
+        };
+
+        D9: D9 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt RPARANTHESIS RBRACKET>;
+        };
+
+        D10: D10 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt GREATER_THAN RBRACKET>;
+        };
+
+        D11: D11 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt CARET TILDE>;
+        };
+
+        D12: D12 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt EXCLAMATION_MARK QUESTION_MARK>;
+        };
+
+        D13: D13 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt HASH UNDER_SCORE>;
+        };
+
+        D14: D14 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt PLUS STAR>;
+        };
+
+        D15: D15 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&mt MINUS SLASH>;
+        };
+        D16: D16 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&kp KP_SLASH>;
+        };
+
+        D17: D17 {
+            compatible = "zmk,behavior-momentary";
+            bindings = <&kp BACKSLASH>;
         };
     };
 
@@ -181,15 +265,15 @@
            // |    |     |     |     |     |     |                           |     |     |     |     |     | ^ ~ |
            // |    | = | | $ & | .   | ; : | , _ |                           | " ' | { < | ( [ | ) ] | } > | ? ! |
            // |    | A   | O   | E   | U   | I   |                           | D   | H   | T   | N   | S   | '   |
-           // |    | Q   | J   | K   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
+           // |    | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
            // |    |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
-           &none       &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
-           &trans      D1          D2          D3          D4          D5                                                      D6      &none       D8          D9          D10         D12
-           &trans      &kp A       &kp O       &kp E       &kp U       &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       D13
+           &none       &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &D11
+           &trans      &D1         &D2         &D3         &D4         &D5                                                     &D6     &D7         &D8         &D9         &D10        &D12
+           &trans      &kp A       &kp O       &kp E       &kp U       &kp I                                                   &kp     &kp H       &kp T       &kp N       &kp S       &D13
            &caps_word  &kp Q       &kp P       &kp Y       &lower_dov  &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
-           &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
+           &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &D14        &D15        &trans
           >;
         };
 
@@ -197,14 +281,14 @@
            // ------------------------------------------------------------------------------
            // |    |     |     |     |     |                                       |     |     |     |     |     |
            // |    |     |     |     |     |     |                           |     |     |     |     |     |     |
-           // |    |     |     |     |     |     |                           |     |     |     |     |     |     |
+           // |    |     |     |     |     |     |                           |     |     |  /  |  \  |     |     |
            // |    |     |     |     |     |     |                           |     |     |     |     | ß   |     |
-           // |    | @   |     |     |     |     |   |   |   |   |   |   |   | B   | M   | W   | V   | Z   |     |
+           // |    | @   |  J  |  K  |     |     |   |   |   |   |   |   |   | B   | M   | W   | V   | Z   |     |
            // |    | ä Ä | ö Ö | ü Ü |     |     |   |   |   |   |   |   |   |     |     |     |     |     |     |
              bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
            &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &D16        &D17        &trans      &trans
            &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
            &trans      &trans      &kp J       &kp K       &to DOVRAK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M       &kp W       &kp V       &kp Z       &trans
            &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &trans
