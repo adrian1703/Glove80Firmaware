@@ -230,7 +230,7 @@
              bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
            &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &D16        &D17        &trans      &trans
+           &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      D16         D17         &trans      &trans
            &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
            &trans      &trans      &kp J       &kp K       &to DOVRAK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M       &kp W       &kp V       &kp Z       &trans
            &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &trans
