@@ -148,7 +148,7 @@
          D6: D6 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt SINGLE_QUOTE DOUBLE_QUOTE>;
+             bindings = <&mt SINGLE_QUOTE DOUBLE_QUOTES>;
          };
 
          D7: D7 {
