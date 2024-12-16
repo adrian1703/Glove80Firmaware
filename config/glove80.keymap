@@ -124,13 +124,13 @@
          D2: D2 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt AMPS DOLLARAND>;
+             bindings = <&mt AMPS DOLLAR>;
          };
 
          D3: D3 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt DOT DOT>;
+             bindings = <&kp DOT>;
          };
 
          D4: D4 {
