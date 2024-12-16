@@ -190,7 +190,7 @@
          D13: D13 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt HASH UNDER_SCORE>;
+             bindings = <&mt HASH UNDERSCORE>;
          };
 
          D14: D14 {
