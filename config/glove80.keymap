@@ -154,7 +154,7 @@
          D7: D7 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt SMALLER_THAN LBRACKET>;
+             bindings = <&mt LESS_THAN LBRACKET>;
          };
 
          D8: D8 {
