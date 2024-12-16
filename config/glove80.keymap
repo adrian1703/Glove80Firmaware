@@ -37,7 +37,7 @@
             bindings = <&mo LOWER>, <&to LOWER>;
         };
 
-        lower_dov: tap_dance_0 {
+        lower_dov: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
