@@ -20,9 +20,10 @@
 #define DOVRAK 3
 #define DOVRAK_LOWER 4
 #define MACRO 5
-#define LOWER 6
-#define MAGIC 7
-#define FACTORY_TEST 8
+#define MIDDLE 6
+#define LOWER 7
+#define MAGIC 8
+#define FACTORY_TEST 9
 
 / {
     behaviors {
@@ -34,6 +35,14 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo LOWER>, <&to LOWER>;
+        };
+
+        lower_dov: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo DOVRAK_LOWER>, <&to DOVRAK_LOWER>;
         };
 
         magic: magic_hold_tap {
@@ -105,7 +114,7 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT   |      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP      | DOWN     |         |           | PGDN     |
 
             bindings = <
-            &none          &none    &none       &none       &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &tog 1         &tog 2   &tog 3      &tog 6      &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
             &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &mt CAPS TAB   &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
@@ -164,7 +173,7 @@
            &none       &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &none
            &trans      &none       &none       &none       &kp P       &kp Y                                                   &none   &none       &mt         &none       &none       &none
            &trans      &kp A       &kp O       &kp E       &kp U       &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &none
-           &none       &kp Q       &kp J       &kp K       &none       &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &none       &kp Q       &kp J       &kp K       &lower_dov  &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
            &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &none       &none       &trans
           >;
         };
@@ -182,12 +191,29 @@
            &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
            &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
            &trans      &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M       &kp W       &kp V       &kp Z       &trans
+           &trans      &trans      &trans      &trans      &to DOVRAK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M       &kp W       &kp V       &kp Z       &trans
            &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &trans
           >;
         };
 
         macro_layer {
+           // ------------------------------------------------------------------------------
+           // |    |   |   |   |   |                                   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           bindings = <
+           &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           >;
+        };
+        middle_layer {
            // ------------------------------------------------------------------------------
            // |    |   |   |   |   |                                   |   |   |   |   |   |
            // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
@@ -210,7 +236,7 @@
             &trans            &none               &none           &none           &none           &kp HOME                                                                              &kp LPAR     &kp KP_NUM   &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp PSCRN
             &trans            &none               &none           &kp UP          &none           &kp END                                                                               &kp RPAR     &kp KP_N7    &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp SLCK
             &trans            &none               &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_UP                                                                             &kp PRCNT    &kp KP_N4    &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &none
-            &trans            &kp K_CMENU         &none           &kp F11         &kp F12         &kp PG_DN       &trans      &trans      &to DEFAULT &trans      &trans      &trans    &kp COMMA    &kp KP_N1    &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
+            &trans            &kp K_CMENU         &none           &kp F11         &kp F12         &kp PG_DN       &trans      &trans      &to MIDDLE  &trans      &trans      &trans    &kp COMMA    &kp KP_N1    &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
             &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
             >;
         };
