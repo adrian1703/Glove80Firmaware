@@ -184,7 +184,7 @@
          D12: D12 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt EXCLAMATION_MARK QUESTION_MARK>;
+             bindings = <&mt EXCLAMATION QUESTION>;
          };
 
          D13: D13 {
@@ -196,13 +196,13 @@
          D14: D14 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt PLUS STAR>;
+             bindings = <&mt KP_PLUS ASTERISK>;
          };
 
          D15: D15 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt MINUS SLASH>;
+             bindings = <&mt KP_MINUS SLASH>;
          };
          D16: D16 {
              compatible = "zmk,behavior-macro";
