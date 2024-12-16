@@ -160,13 +160,13 @@
          D8: D8 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt LEFT_PARANTHESIS LEFT_BRACKET>;
+             bindings = <&mt KP_LEFT_PARENTHESIS LEFT_BRACKET>;
          };
 
          D9: D9 {
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings = <&mt RIGHT_PARANTHESIS RIGHT_BRACKET>;
+             bindings = <&mt KP_RIGHT_PARENTHESIS RIGHT_BRACKET>;
          };
 
          D10: D10 {
