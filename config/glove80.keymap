@@ -70,14 +70,14 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LEFT>, <&kp LCRTL LEFT>;
+            bindings = <&kp LEFT>, <&left_macro>;
         };
         right: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RIGHT>, <&kp LCRTL RIGHT>;
+            bindings = <&kp RIGHT>, <&right_macro>;
         };
 
         magic: magic_hold_tap {
@@ -91,6 +91,26 @@
     };
 
     macros {
+        left_macro: left_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCRTL>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCRTL>
+                ;
+        };
+
+        right_macro: right_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCRTL>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LCRTL>
+                ;
+        };
+
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
