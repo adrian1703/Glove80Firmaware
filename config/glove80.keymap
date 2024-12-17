@@ -31,16 +31,15 @@
 #define D16 &kp KP_SLASH                          // / when tapped
 #define D17 &kp BACKSLASH                         // \ when tapped
 // layers
-#define DEFAULT 0
-#define UTIL 1
-#define QWERTZ 2
-#define DOVRAK 3
+#define DEFAULT      0
+#define UTIL         1
+#define QWERTZ       2
+#define DOVRAK       3
 #define DOVRAK_LOWER 4
-#define MACRO 5
-#define MIDDLE 6
-#define LOWER 7
-#define MAGIC 8
-#define FACTORY_TEST 9
+#define LOWER        5
+#define MACRO        6
+#define MAGIC        7
+//#define FACTORY_TEST 8
 
 &mt {
     tapping-term-ms = <400>;
@@ -158,7 +157,7 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT |   | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |   | UP    | DOWN  |       |        | PGDN    |
 
             bindings = <
-            &tog 1         &tog 2   &tog 3      &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &tog 1         &to 2    &to 3       &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
             &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &mt CAPS TAB   &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
@@ -206,12 +205,12 @@
 
         dovrak_base_layer {
            // ----------------------------------------------------------------------------------------------------
-           // |    |     |     |     |     |                                       |     |     |     |     |     |
-           // |    |     |     |     |     |     |                           |     |     |     |     |     | ^ ~ |
-           // |    | = | | $ & | .   | ; : | , _ |                           | " ' | { < | ( [ | ) ] | } > | ? ! |
-           // |    | A   | O   | E   | U   | I   |                           | D   | H   | T   | N   | S   | '   |
-           // |    | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
-           // |    |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
+           // |        |     |     |     |     |                                       |     |     |     |     |     |
+           // |        |     |     |     |     |     |                           |     |     |     |     |     | ^ ~ |
+           // |        | = | | $ & | .   | ; : | , _ |                           | " ' | { < | ( [ | ) ] | } > | ? ! |
+           // |        | A   | O   | E   | U   | I   |                           | D   | H   | T   | N   | S   | '   |
+           // |capword | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
+           // |        |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
            &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
@@ -257,23 +256,7 @@
            &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
            >;
         };
-        middle_layer {
-           // ------------------------------------------------------------------------------
-           // |    |   |   |   |   |                                   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           bindings = <
-           &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-           >;
-        };
+
         lower_layer {
             bindings = <
             &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
