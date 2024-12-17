@@ -70,14 +70,14 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LEFT>, <&kp LCRTL &kp LEFT>;
+            bindings = <&kp LEFT>, <&kp LC(LEFT)>;
         };
         right: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RIGHT>, <&kp LCRTL &kp RIGHT>;
+            bindings = <&kp RIGHT>, <&kp LC(RIGHT)>;
         };
 
         magic: magic_hold_tap {
