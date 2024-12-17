@@ -13,15 +13,15 @@
 
 #define HYPER LC(LS(LG(LALT)))
 
-#define D1 &mt PIPE KP_EQUAL                      // | when tapped, = when  held
+#define D1 &mt PIPE EQUAL                         // | when tapped, = when  held
 #define D2 &mt AMPS DOLLAR                        // $ when tapped, & when  held
 #define D3 &kp DOT                                // . when tapped
 #define D4 &mt COLON SEMI                         // ; when tapped, : when  held
 #define D5 &mt UNDERSCORE COMMA                   // , when tapped, _ when  held
 #define D6 &mt SINGLE_QUOTE DOUBLE_QUOTES         // ' when tapped, " when  held
 #define D7 &mt LESS_THAN LEFT_BRACE               // { when tapped, < when  held
-#define D8 &mt KP_LEFT_PARENTHESIS LEFT_BRACKET   // ) when tapped, ] when  held
-#define D9 &mt KP_RIGHT_PARENTHESIS RIGHT_BRACKET // ( when tapped, [ when  held
+#define D8 &mt LEFT_PARENTHESIS LEFT_BRACKET      // ) when tapped, ] when  held
+#define D9 &mt RIGHT_PARENTHESIS RIGHT_BRACKET    // ( when tapped, [ when  held
 #define D10 &mt GREATER_THAN RIGHT_BRACE          // } when tapped, > when  held
 #define D11 &mt CARET TILDE                       // ^ when tapped, ~ when  held
 #define D12 &mt EXCLAMATION QUESTION              // ? when tapped, ! when  held
@@ -41,7 +41,10 @@
 #define LOWER 7
 #define MAGIC 8
 #define FACTORY_TEST 9
-// custom keys for dovrak
+
+&mt {
+    tapping-term-ms = <400>;
+};
 
 / {
     behaviors {
@@ -155,7 +158,7 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT |   | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |   | UP    | DOWN  |       |        | PGDN    |
 
             bindings = <
-            &tog 1         &tog 2   &tog 3      &tog 6      &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &tog 1         &tog 2   &tog 3      &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
             &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &mt CAPS TAB   &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
@@ -171,14 +174,14 @@
             // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
             // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
             // |   |   |   |   |   |   | LSHFT |          |   | |   |              | RSHFT |   |   |   |   |   |   |
-            // |   |   |   |   |   |   |       | DEL INS  |   | |   | CRTL-Z Enter |       |   |   |   |   |   |   |
+            // |   |   |   |   |   |   |       | DEL      |   | |   | CRTL-Z Enter |       |   |   |   |   |   |   |
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                              &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans  &sk LSHFT   &trans      &trans  &trans  &trans  &sk RSHFT   &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans          &trans      &mt DEL INS &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &trans      &kp DEL     &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
             >;
          };
 
@@ -210,12 +213,12 @@
            // |    | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
            // |    |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
            bindings = <
-           &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
-           &none       &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
-           &trans      D1          D2          D3          D4          D5                                                      D6      D7          D8          D9          D10         D12
-           &trans      &kp A       &kp O       &kp E       &kp U       &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       D13
-           &caps_word  &kp Q       &kp P       &kp Y       &lower_dov  &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
-           &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
+           &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
+           &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
+           &trans      D1          D2          D3          D4                 D5                                                      D6      D7          D8          D9          D10         D12
+           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       D13
+           &caps_word  &kp Q       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
           >;
         };
 
@@ -228,12 +231,12 @@
            // |    | @   |  J  |  K  |     |     |   |   |   |   |   |   |   | B   | M   | W   | V   | Z   |     |
            // |    | ä Ä | ö Ö | ü Ü |     |     |   |   |   |   |   |   |   |     |     |     |     |     |     |
              bindings = <
-           &trans      &trans      &trans      &trans      &trans                                                                              &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans              &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans              &trans                                                  &trans  &trans      D16         D17         &trans      &trans
-           &trans      &trans      &trans      &trans      &trans              &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &kp J       &kp K       &tog DOVRAK_LOWER   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M       &kp W       &kp V       &kp Z       &trans
-           &trans      &trans      &trans      &trans      &trans                      &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &trans      &trans      &trans                                                                   &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans  &trans      D16         D17         &trans      &trans
+           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &kp J       &kp K       &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M       &kp W       &kp V       &kp Z       &trans
+           &trans      &trans      &trans      &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &trans
           >;
         };
 
