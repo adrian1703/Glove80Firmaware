@@ -238,19 +238,19 @@
 
         dovrak_base_layer_2 {
            // ----------------------------------------------------------------------------------------------------
-           // |    |     |     |     |     |                                       |     |     |     |     |     |
-           // |    |     |     |     |     |     |                           |     |     |     |     |     |     |
-           // |    |     |     |     |     |     |                           |     |     |  /  |  \  |     |     |
-           // |    |     |     |     |     |     |                           |     |     |     |     | ß   |     |
-           // |    | @   |  J  |  K  |     |     |   |   |   |   |   |   |   | B   | M   | W   | V   | Z   |     |
-           // |    | ä Ä | ö Ö | ü Ü |     |     |   |   |   |   |   |   |   |     |     |     |     |     |     |
+           // |    |        |     |        |     |                                          |        |           |     |     |     |
+           // |    |        |     |        |     |     |                           |        |        |           |     |     |     |
+           // |    |        |     |        |     |     |                           |        | crtl z |  /        |  \  |     |     |
+           // |    |        |     | crtl d |     |     |                           | crtl x | crtl c | shift ins |     | ß   |     |
+           // |    | crtl y |  J  |  K     |     |     |   |   |   |   |   |   |   | B      | M      | W         | V   | Z   |     |
+           // |    | ä Ä    | ö Ö | ü Ü    |     |     |   |   |   |   |   |   |   |        |        |           |     |     |     |
              bindings = <
-           &trans      &trans      &trans      &trans      &trans                                                                   &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans  &trans      D16         D17         &trans      &trans
-           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &kp J       &kp K       &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M       &kp W       &kp V       &kp Z       &trans
-           &trans      &trans      &trans      &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans     &trans      &trans      &trans      &trans      &trans
+           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans     &kp LC(Z)   D16         D17         &trans      &trans
+           &trans      &trans      &trans      &kp LC(D)   &trans   &trans                                                  &kp LC(X)  &kp LC(C)   &kp LS(INS) &trans      &trans      &trans
+           &trans      &kp LC(Y)   &kp J       &kp K       &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M       &kp W       &kp V       &kp Z       &trans
+           &trans      &trans      &trans      &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans      &trans      &trans      &trans      &trans
           >;
         };
 
