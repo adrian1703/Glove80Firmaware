@@ -195,7 +195,7 @@
             &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans  &sk LSHFT   &trans      &trans  &trans  &trans  &sk RSHFT   &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &left   &right          &trans      &trans      &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
             >;
          };
 
@@ -238,19 +238,19 @@
 
         dovrak_base_layer_2 {
            // ----------------------------------------------------------------------------------------------------
-           // |    |        |     |        |     |                                          |        |           |     |     |     |
-           // |    |        |     |        |     |     |                           |        |        |           |     |     |     |
-           // |    |        |     |        |     |     |                           |        | crtl z |  /        |  \  |     |     |
-           // |    |        |     | crtl d |     |     |                           | crtl x | crtl c | shift ins |     | ß   |     |
-           // |    | crtl y |  J  |  K     |     |     |   |   |   |   |   |   |   | B      | M      | W         | V   | Z   |     |
-           // |    | ä Ä    | ö Ö | ü Ü    |     |     |   |   |   |   |   |   |   |        |        |           |     |     |     |
+           // |    |        |        |        |   |                                         |        |           |     |     |     |
+           // |    |        |        |        |   |   |                           |         |        |           |     |     |     |
+           // |    |        |        | ai     |   |   |                           | crtl F4 | crtl z |  /        |  \  |     |     |
+           // |    |        | cursor | crtl d |   |   |                           | crtl x  | crtl c | shift ins |     | ß   |     |
+           // |    | crtl y |  J     |  K     |   |   |   |   |   |   |   |   |   | B       | M      | W         | V   | Z   |     |
+           // |    | ä Ä    | ö Ö    | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |     |     |     |
              bindings = <
-           &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans     &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans   &trans                                                  &trans     &kp LC(Z)   D16         D17         &trans      &trans
-           &trans      &trans      &trans      &kp LC(D)   &trans   &trans                                                  &kp LC(X)  &kp LC(C)   &kp LS(INS) &trans      &trans      &trans
-           &trans      &kp LC(Y)   &kp J       &kp K       &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M       &kp W       &kp V       &kp Z       &trans
-           &trans      &trans      &trans      &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans      &trans      &trans      &trans      &trans
+           &trans      &trans        &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
+           &trans      &trans        &trans      &trans      &trans   &trans                                                  &trans     &trans      &trans      &trans      &trans      &trans
+           &trans      &trans        &trans      &LS(LA(3))  &trans   &trans                                                  &kp LC(F4) &kp LC(Z)   D16         D17         &trans      &trans
+           &trans      &kp LC(LS(A)) &LS(ESC)    &kp LC(D)   &trans   &trans                                                  &kp LC(X)  &kp LC(C)   &kp LS(INS) &trans      &trans      &trans
+           &trans      &kp LC(Y)     &kp J       &kp K       &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M       &kp W       &kp V       &kp Z       &trans
+           &trans      &trans        &trans      &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans      &trans      &trans      &trans      &trans
           >;
         };
 
@@ -293,7 +293,6 @@
             &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &none
             >;
         };
-            // unused
         factory_test_layer {
             bindings = <
             &kp N0   &kp N6   &kp N2   &kp N8   &kp N4                                                                              &kp N4   &kp N8   &kp N2   &kp N6   &kp N0
