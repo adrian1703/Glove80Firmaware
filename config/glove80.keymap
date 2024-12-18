@@ -245,12 +245,12 @@
            // |    | crtl y |  J     |  K     |   |   |   |   |   |   |   |   |   | B       | M      | W         | V   | Z   |     |
            // |    | ä Ä    | ö Ö    | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |     |     |     |
              bindings = <
-           &trans      &trans        &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
-           &trans      &trans        &trans      &trans      &trans   &trans                                                  &trans     &trans      &trans      &trans      &trans      &trans
-           &trans      &trans        &trans      &LS(LA(3))  &trans   &trans                                                  &kp LC(F4) &kp LC(Z)   D16         D17         &trans      &trans
-           &trans      &kp LC(LS(A)) &LS(ESC)    &kp LC(D)   &trans   &trans                                                  &kp LC(X)  &kp LC(C)   &kp LS(INS) &trans      &trans      &trans
-           &trans      &kp LC(Y)     &kp J       &kp K       &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M       &kp W       &kp V       &kp Z       &trans
-           &trans      &trans        &trans      &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans      &trans      &trans      &trans      &trans
+           &trans      &trans        &trans      &trans        &trans                                                                      &trans      &trans      &trans      &trans      &trans
+           &trans      &trans        &trans      &trans        &trans   &trans                                                  &trans     &trans      &trans      &trans      &trans      &trans
+           &trans      &trans        &trans      &kp LS(LA(3)) &trans   &trans                                                  &kp LC(F4) &kp LC(Z)   D16         D17         &trans      &trans
+           &trans      &kp LC(LS(A)) &LS(ESC)    &kp LC(D)     &trans   &trans                                                  &kp LC(X)  &kp LC(C)   &kp LS(INS) &trans      &trans      &trans
+           &trans      &kp LC(Y)     &kp J       &kp K         &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M       &kp W       &kp V       &kp Z       &trans
+           &trans      &trans        &trans      &trans        &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans      &trans      &trans      &trans      &trans
           >;
         };
 
