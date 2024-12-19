@@ -177,7 +177,7 @@
             &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &mt CAPS TAB   &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &none          &none    &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp RALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 
@@ -247,7 +247,7 @@
              bindings = <
            &trans      &trans        &trans      &trans        &trans                                                                      &trans      &trans      &trans      &trans      &trans
            &trans      &trans        &trans      &trans        &trans   &trans                                                  &trans     &trans      &trans      &trans      &trans      &trans
-           &trans      &trans        &trans      &kp LS(LA(3)) &trans   &trans                                                  &kp LC(F4) &kp LC(Z)   D16         D17         &trans      &trans
+           &trans      &trans        &kp LA(INS) &kp LS(LA(3)) &trans   &trans                                                  &kp LC(F4) &kp LC(Z)   D16         D17         &trans      &trans
            &trans      &kp LC(LS(A)) &kp LS(ESC) &kp LC(D)     &trans   &trans                                                  &kp LC(X)  &kp LC(C)   &kp LS(INS) &trans      &trans      &trans
            &trans      &kp LC(Y)     &kp J       &kp K         &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M       &kp W       &kp V       &kp Z       &trans
            &trans      &trans        &trans      &trans        &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans      &trans      &trans      &trans      &trans
