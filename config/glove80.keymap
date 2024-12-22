@@ -254,24 +254,6 @@
           >;
         };
 
-        macro_layer {
-           // ------------------------------------------------------------------------------
-           // |    |   |   |   |   |                                   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           bindings = <
-           &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-           >;
-        };
-
         lower_layer {
             bindings = <
             &trans      &trans      &trans      &trans      &trans                                                                                 &trans      &trans      &trans      &trans      &trans
@@ -292,6 +274,24 @@
 //            &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
 //            >;
 //        };
+
+        macro_layer {
+           // ------------------------------------------------------------------------------
+           // |    |   |   |   |   |                                   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           bindings = <
+           &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           >;
+        };
 
         magic_layer {
             bindings = <
