@@ -248,7 +248,7 @@
            &trans      &trans           &trans            &trans            &trans                                                                      &trans           &trans           &trans       &trans      &trans
            &trans      &trans           &trans            &trans            &trans   &trans                                                  &trans     &trans           &trans           &trans       &trans      &trans
            &trans      &kp LC(LS(A))    &kp LS(LA(3))     &trans            &trans   &trans                                                  &kp LC(F4) &trans           D16              D17          &trans      &trans
-           &trans      &kp LC(LS(BSPC)) &kp LC(Z)         &kp LA(INS)       &trans   &trans                                                  &trans     &trans           &kp LC(LS(F10)   &kp LC(LA(L) &trans      &trans
+           &trans      &kp LC(LS(BSPC)) &kp LC(Z)         &kp LA(INS)       &trans   &trans                                                  &trans     &trans           &kp LC(LS(F10))  &kp LC(LA(L) &trans      &trans
            &trans      &kp LC(X)        &kp J             &kp K             &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M            &kp W            &kp V        &kp Z       &trans
            &trans      &trans           &trans            &trans            &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans           &trans           &trans       &trans      &trans
           >;
