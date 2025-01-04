@@ -238,21 +238,23 @@
 
         dovrak_base_layer_2 {
            // ----------------------------------------------------------------------------------------------------
-           // |    |        |           |        |   |                                         |        |           |     |     |     |
-           // |    |        |           |        |   |   |                           |         |        |           |     |     |     |
-           // |    | actions|           | ai     |   |   |                           | crtl F4 | crtl z |  /        |  \  |     |     |
-           // |    | l-edit | copy      | crtl d |   |   |                           | crtl x  | crtl c | shift ins |     | ß   |     |
-           // |    | crtl y |  J        |  K     |   |   |   |   |   |   |   |   |   | B       | M      | W         | V   | Z   |     |
-           // |    | ä Ä    | ö Ö       | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |     |     |     |
+           // |    |        |           |        |   |                                         |        |           |      |     |     |
+           // |    |        |           |        |   |   |                           |         |        |           |      |     |     |
+           // |    | actions| ai        |        |   |   |                           | crtl F4 |        |  /        |  \   |     |     |
+           // |    | l-edit | undo      | insert |   |   |                           |         |        | run       |format| ß   |     |
+           // |    | crtl x |  J        |  K     |   |   |   |   |   |   |   |   |   | B       | M      | W         | V    | Z   |     |
+           // |    | ä Ä    | ö Ö       | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |      |     |     |
              bindings = <
-           &trans      &trans           &trans            &trans        &trans                                                                      &trans      &trans      &trans      &trans      &trans
-           &trans      &trans           &trans            &trans        &trans   &trans                                                  &trans     &trans      &trans      &trans      &trans      &trans
-           &trans      &kp LC(LS(A))    &kp LA(INS)       &kp LS(LA(3)) &trans   &trans                                                  &kp LC(F4) &kp LC(Z)   D16         D17         &trans      &trans
-           &trans      &kp LC(LS(BSPC)) &kp LC(C)         &kp LC(D)     &trans   &trans                                                  &kp LC(X)  &kp LC(C)   &kp LS(INS) &trans      &trans      &trans
-           &trans      &kp LC(Y)        &kp J             &kp K         &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M       &kp W       &kp V       &kp Z       &trans
-           &trans      &trans           &trans            &trans        &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans      &trans      &trans      &trans      &trans
+           &trans      &trans           &trans            &trans            &trans                                                                      &trans           &trans           &trans       &trans      &trans
+           &trans      &trans           &trans            &trans            &trans   &trans                                                  &trans     &trans           &trans           &trans       &trans      &trans
+           &trans      &kp LC(LS(A))    &kp LS(LA(3))     &trans            &trans   &trans                                                  &kp LC(F4) &trans           D16              D17          &trans      &trans
+           &trans      &kp LC(LS(BSPC)) &kp LC(Z)         &kp LA(INS)       &trans   &trans                                                  &trans     &trans           &kp LC(LS(F10)   &kp LC(LA(L) &trans      &trans
+           &trans      &kp LC(X)        &kp J             &kp K             &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp B      &kp M            &kp W            &kp V        &kp Z       &trans
+           &trans      &trans           &trans            &trans            &trans           &trans  &trans  &trans  &trans  &trans  &trans             &trans           &trans           &trans       &trans      &trans
           >;
         };
+
+
 
         lower_layer {
             bindings = <
