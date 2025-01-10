@@ -86,7 +86,7 @@
         S0: S0 {
                     compatible = "zmk,behavior-mod-morph";
                     #binding-cells = <0>;
-                    bindings = <&kp ESC>, <&kp caps_word>;
+                    bindings = <&kp ESC>, <&caps_word>;
                     mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
