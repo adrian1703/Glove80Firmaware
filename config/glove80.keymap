@@ -13,7 +13,25 @@
 
 #define HYPER LC(LS(LG(LALT)))
 
-#define D1 &mt PIPE EQUAL                         // | when tapped, = when  held
+#define D1 &mt PIPE EQUAL                         // = when tapped, | when  held
+#define D2 &mt AMPS DOLLAR                        // $ when tapped, & when  held
+#define D3 &mt EXCLAMATION DOT                    // . when tapped, ! when  held
+#define D4 &mt COLON SEMI                         // ; when tapped, : when  held
+#define D5 &mt UNDERSCORE COMMA                   // , when tapped, _ when  held
+#define D6 &mt SINGLE_QUOTE DOUBLE_QUOTES         // ' when tapped, " when  held
+#define D7 &mt LESS_THAN LEFT_BRACE               // { when tapped, < when  held
+#define D8 &mt LEFT_BRACKET LEFT_PARENTHESIS      // ) when tapped, ] when  held
+#define D9 &mt RIGHT_BRACKET RIGHT_PARENTHESIS    // ( when tapped, [ when  held
+#define D10 &mt GREATER_THAN RIGHT_BRACE          // } when tapped, > when  held
+#define D11 &mt CARET TILDE                       // ^ when tapped, ~ when  held
+#define D12 &mt EXCLAMATION QUESTION              // ? when tapped, ! when  held
+#define D13 &mt GRAVE HASH                        // # when tapped, ` when  held
+#define D14 &mt ASTERISK KP_PLUS                  // + when tapped, * when  held
+#define D15 &mt SLASH KP_MINUS                    // - when tapped, / when  held
+#define D16 &kp KP_SLASH                          // / when tapped
+#define D17 &kp BACKSLASH                         // \ when tapped
+
+#define D1 &mt PIPE EQUAL                         // = when tapped, | when  held
 #define D2 &mt AMPS DOLLAR                        // $ when tapped, & when  held
 #define D3 &mt EXCLAMATION DOT                    // . when tapped, ! when  held
 #define D4 &mt COLON SEMI                         // ; when tapped, : when  held
@@ -42,7 +60,7 @@
 //#define FACTORY_TEST 8
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -53,22 +71,22 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&mo LOWER>, <&tog LOWER>;
-        };
-
-        ld_dov: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_DANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&mo DOVRAK>, <&tog DOVRAK>;
         };
 
-        shifted: modmorph {
+//        ld_dov: tap_dance_1 {
+//            compatible = "zmk,behavior-tap-dance";
+//            label = "LAYER_TAP_DANCE2";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <200>;
+//            bindings = <&mo DOVRAK>, <&tog DOVRAK>;
+//        };
+
+        sh: modmorph {
                     compatible = "zmk,behavior-mod-morph";
-                    #binding-cells = <0>;
-                    bindings = <&kp ESC>, <&kp GRAVE>;
+                    #binding-cells = <2>;
+                    bindings = <&kp>, <&kp>;
                     mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -191,7 +209,7 @@
             &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &mt CAPS TAB   &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &ld_dov        &none    &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
+            &tog DOVRAK    &none    &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
             &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
@@ -255,17 +273,17 @@
            // ----------------------------------------------------------------------------------------------------
            // |    |        |           |        |   |                                         |        |           |      |     |     |
            // |    |        |           |        |   |   |                           |         |        |           |      |     |     |
-           // |    | actions| ai        | insert |   |   |                           | crtl F4 |        |  /        |  \   |     |     |
+           // |    | actions| dupli     | save   |   |   |                           | crtl F4 |        |  /        |  \   |     |     |
            // |    | l-edit | undo      | copy   |   |   |                           |         |        | run       |format| ß   |     |
-           // |    | crtl x |  J        |  K     |   |   |   |   |   |   |   |   |   | B       | M      | W         | V    | Z   |     |
+           // |    | crtl x |  J        |  K     |   |ins|   |   |   |   |   |   |   | B       | M      | W         | V    | Z   |     |
            // |    | ä Ä    | ö Ö       | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |      |     |     |
              bindings = <
-           &trans      &trans           &trans            &trans            &trans                                                                        &trans           &trans           &trans        &trans      &trans
-           &trans      &trans           &trans            &trans            &trans   &trans                                                    &trans     &trans           &trans           &trans        &trans      &trans
-           &trans      &kp LC(LS(A))    &kp LC(D)         &kp LA(INS)       &trans   &trans                                                    &kp LC(F4) &trans           D16              D17           &trans      &trans
-           &trans      &kp LC(LS(BSPC)) &kp LC(Z)         &mt LC(V) LC(C)   &trans   &trans                                                    &trans     &trans           &kp LC(LS(F10))  &kp LC(LA(L)) &trans      &trans
-           &trans      &kp LC(X)        &kp J             &kp K             &none    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp B      &kp M            &kp V            &kp Q         &kp Z       &trans
-           &trans      &trans           &trans            &trans            &trans           &kp SPACE &kp RET &trans  &trans  &trans  &trans             &trans           &trans           &trans        &trans      &trans
+           &trans      &trans           &trans            &trans            &trans                                                                           &trans           &trans           &trans        &trans      &trans
+           &trans      &trans           &trans            &trans            &trans   &trans                                                       &trans     &trans           &trans           &trans        &trans      &trans
+           &trans      &kp LC(LS(A))    &kp LC(D)         &kp LC(S)         &trans   &trans                                                       &kp LC(F4) &trans           D16              D17           &trans      &trans
+           &trans      &kp LC(LS(BSPC)) &kp LC(Z)         &kp LC(C)         &trans   &trans                                                       &trans     &trans           &kp LC(LS(F10))  &kp LC(LA(L)) &trans      &trans
+           &trans      &kp LC(X)        &kp J             &kp K             &none    &mt LC(V)  &trans    &trans  &trans  &trans  &trans  &trans  &kp B      &kp M            &kp V            &kp Q         &kp Z       &trans
+           &trans      &trans           &trans            &trans            &trans              &kp SPACE &kp RET &trans  &trans  &trans  &trans             &trans           &trans           &trans        &trans      &trans
           >;
         };
 
