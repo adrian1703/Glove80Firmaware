@@ -207,7 +207,7 @@
             bindings = <
             &tog 1         &to 2    &to 3       &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
             &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
-            &S0            &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
+            &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &mt CAPS TAB   &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &tog DOVRAK    &none    &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
             &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
@@ -257,7 +257,7 @@
            // |        |     |     |     |     |     |                           |     |     |     |     |     | ^ ~ |
            // |        | = | | $ & | .   | ; : | , _ |                           | " ' | { < | ( [ | ) ] | } > | ? ! |
            // |        | A   | O   | E   | U   | I   |                           | D   | H   | T   | N   | S   | # ` |
-           // |capword | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
+           // |        | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
            // |        |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
@@ -282,7 +282,7 @@
            &trans      &trans           &trans            &trans            &trans   &trans                                                       &trans     &trans           &trans           &trans        &trans      &trans
            &trans      &kp LC(LS(A))    &kp LC(D)         &kp LC(S)         &trans   &trans                                                       &kp LC(F4) &trans           D16              D17           &trans      &trans
            &trans      &kp LC(LS(BSPC)) &kp LC(Z)         &kp LC(C)         &trans   &trans                                                       &trans     &trans           &kp LC(LS(F10))  &kp LC(LA(L)) &trans      &trans
-           &trans      &kp LC(X)        &kp J             &kp K             &none    &kp LC(V)  &trans    &trans  &trans  &trans  &trans  &trans  &kp B      &kp M            &kp V            &kp Q         &kp Z       &trans
+           &caps_word  &kp LC(X)        &kp J             &kp K             &none    &kp LC(V)  &trans    &trans  &trans  &trans  &trans  &trans  &kp B      &kp M            &kp V            &kp Q         &kp Z       &trans
            &trans      &trans           &trans            &trans            &trans              &kp SPACE &kp RET &trans  &trans  &trans  &trans             &trans           &trans           &trans        &trans      &trans
           >;
         };
