@@ -31,7 +31,7 @@
 #define D16 &kp KP_SLASH                          // / when tapped
 #define D17 &kp BACKSLASH                         // \ when tapped
 
-//#define D1 &mt PIPE EQUAL                         // = when tapped, | when  held
+//#define S1 &sh PIPE EQUAL                         // = when tapped, | when  held
 //#define D2 &mt AMPS DOLLAR                        // $ when tapped, & when  held
 //#define D3 &mt EXCLAMATION DOT                    // . when tapped, ! when  held
 //#define D4 &mt COLON SEMI                         // ; when tapped, : when  held
@@ -83,12 +83,12 @@
 //            bindings = <&mo DOVRAK>, <&tog DOVRAK>;
 //        };
 
-        sh: modmorph {
-                    compatible = "zmk,behavior-mod-morph";
-                    #binding-cells = <2>;
-                    bindings = <&kp>, <&kp>;
-                    mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+//        sh: modmorph {
+//                    compatible = "zmk,behavior-mod-morph";
+//                    #binding-cells = <2>;
+//                    bindings = <&kp>, <&kp>;
+//                    mods = <(MOD_LSFT|MOD_RSFT)>;
+//        };
 
 //        lower_dov: tap_dance_1 {
 //            compatible = "zmk,behavior-tap-dance";
