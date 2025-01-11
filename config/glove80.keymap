@@ -264,7 +264,7 @@
            &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
            &trans      D1          D2          D3          D4                 D5                                                      D6      D7          D8          D9          D10         D12
            &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       D13
-           &trans      &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &trans      &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
            &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
           >;
         };
@@ -275,14 +275,14 @@
            // |    |        |           |        |   |   |                           |         |        |           |      |     |     |
            // |    | actions| dupli     | save   |   |   |                           | crtl F4 |        |  /        |  \   |     |     |
            // |    | l-edit | undo      | copy   |   |   |                           |         |        | run       |format| ß   |     |
-           // |    | crtl x |  J        |  K     |   |ins|   |   |   |   |   |   |   | B       | M      | W         | V    | Z   |     |
+           // |    | crtl x |  J        |  K     |   |ins|   |   |   |   |   |   |   | B       | X      | V         | Q    | Z   |     |
            // |    | ä Ä    | ö Ö       | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |      |     |     |
              bindings = <
            &trans      &trans           &trans            &trans            &trans                                                                           &trans           &trans           &trans        &trans      &trans
            &trans      &trans           &trans            &trans            &trans   &trans                                                       &trans     &trans           &trans           &trans        &trans      &trans
            &trans      &kp LC(LS(A))    &kp LC(D)         &kp LC(S)         &trans   &trans                                                       &kp LC(F4) &trans           D16              D17           &trans      &trans
            &trans      &kp LC(LS(BSPC)) &kp LC(Z)         &kp LC(C)         &trans   &trans                                                       &trans     &trans           &kp LC(LS(F10))  &kp LC(LA(L)) &trans      &trans
-           &caps_word  &kp LC(X)        &kp J             &kp K             &none    &kp LC(V)  &trans    &trans  &trans  &trans  &trans  &trans  &kp B      &kp M            &kp V            &kp Q         &kp Z       &trans
+           &caps_word  &kp LC(X)        &kp J             &kp K             &none    &kp LC(V)  &trans    &trans  &trans  &trans  &trans  &trans  &kp B      &kp X            &kp V            &kp Q         &kp Z       &trans
            &trans      &trans           &trans            &trans            &trans              &kp SPACE &kp RET &trans  &trans  &trans  &trans             &trans           &trans           &trans        &trans      &trans
           >;
         };
