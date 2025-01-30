@@ -281,7 +281,7 @@
            &trans      &trans           &trans            &trans            &trans                                                                                   &trans           &trans           &trans        &trans         &trans
            &trans      &trans           &trans            &trans            &trans   &trans                                                       &trans             &trans           &trans           &trans        &trans         &trans
            &trans      &kp LC(LS(A))    &kp LC(D)         &kp LC(S)         &trans   &trans                                                       &kp LC(F4)         &trans           D16              D17           &trans         &trans
-           &kp CAPS    &kp LC(LS(BSPC)) &kp LC(Z)         &kp LC(C)         &trans   &trans                                                       &trans             &trans           &kp LC(LS(F10))  &kp LC(LA(L)) &kp LC(LA(O))  &trans
+           &kp CAPS    &kp LC(LS(BSPC)) &kp LC(Z)         &kp LC(C)         &trans   &kp LG(LS(S))                                                &trans             &trans           &kp LC(LS(F10))  &trans        &trans         &trans
            &caps_word  &kp LC(X)        &kp J             &kp K             &none    &kp LC(V)  &trans    &trans  &trans  &trans  &trans  &trans  &kp B              &kp X            &kp V            &kp Q         &kp Z          &trans
            &trans      &trans           &trans            &trans            &trans              &kp SPACE &kp RET &trans  &trans  &trans  &trans                     &trans           &trans           &trans        &trans         &trans
           >;
