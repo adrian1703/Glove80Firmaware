@@ -34,11 +34,11 @@
 
 // layers
 #define DEFAULT       0
-#define UTIL          1
-#define QWERTZ        2
-#define DOVRAK        3
-#define DOVRAK_SWITCH 4
-#define DOVRAK_LOWER  5
+#define QWERTZ        1
+#define DOVRAK        2
+#define DOVRAK_SWITCH 3
+#define DOVRAK_LOWER  4
+#define UTIL          5
 #define LOWER         6
 #define MACRO         7
 #define MAGIC         8
@@ -52,6 +52,7 @@
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
+        // unused atm
         layer_td: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP_DANCE";
@@ -187,32 +188,14 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT |   | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |   | UP    | DOWN  |       |        | PGDN    |
 
             bindings = <
-            &to  1         &tog 2   &tog 4      &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &tog 5         &tog 1   &tog 3      &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
             &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &kp TAB        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &tog DOVRAK    &none    &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
+            &tog DOVRAK    &none    &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &mo DOVRAK &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
             &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
-
-         util_layer {
-            // -----------------------------------------------------------------------------------------------------
-            // |   |   |   |   |   |                                                           |   |   |   |   |   |
-            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-            // |   |   |   |   |   |   | LSHFT |          |   | |   |              | RSHFT |   |   |   |   |   |   |
-            // |   |   |   |   |   |   |       | DEL      |   | |   | CRTL-Z Enter |       |   |   |   |   |   |   |
-            bindings = <
-            &trans  &trans  &trans    &trans    &trans                                                                                   &trans  &trans  &trans     &trans           &trans
-            &trans  &trans  &trans    &trans    &trans    &trans                                                              &trans     &trans  &trans  &trans     &trans           &trans
-            &trans  &trans  &kp HOME  &kp UP    &kp END   &kp PG_UP                                                           &kp COLON  &kp N7  &kp N8  &kp N9     &kp KP_PLUS      &trans
-            &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_DN                                                           &kp DOT    &kp N4  &kp N5  &kp N6     &kp KP_MINUS     &trans
-            &trans  &trans  &trans    &trans    &trans    &trans  &trans      &trans      &trans  &trans  &trans  &trans      &kp N0     &kp N1  &kp N2  &kp N3     &kp KP_MULTIPLY  &trans
-            &trans  &trans  &trans    &trans    &trans            &trans      &trans      &trans  &trans  &trans  &trans                 &trans  &trans  &kp EQUAL  &kp KP_DIVIDE    &trans
-            >;
-         };
 
         qwertz_layer {
             // -------------------------------------------------------------------------------------------------------------
@@ -298,16 +281,24 @@
             &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
             >;
         };
-//        lower_layer {
-//            bindings = <
-//            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
-//            &trans            &none               &none           &none           &none           &kp HOME                                                                              &kp LPAR     &kp KP_NUM   &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp PSCRN
-//            &trans            &none               &none           &kp UP          &none           &kp END                                                                               &kp RPAR     &kp KP_N7    &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp SLCK
-//            &trans            &none               &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_UP                                                                             &kp PRCNT    &kp KP_N4    &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &none
-//            &trans            &kp K_CMENU         &none           &kp F11         &kp F12         &kp PG_DN       &trans      &trans      &tog LOWER  &trans      &trans      &trans    &kp COMMA    &kp KP_N1    &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
-//            &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
-//            >;
-//        };
+
+         util_layer {
+            // -----------------------------------------------------------------------------------------------------
+            // |   |   |   |   |   |                                                           |   |   |   |   |   |
+            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
+            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
+            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
+            // |   |   |   |   |   |   | LSHFT |          |   | |   |              | RSHFT |   |   |   |   |   |   |
+            // |   |   |   |   |   |   |       | DEL      |   | |   | CRTL-Z Enter |       |   |   |   |   |   |   |
+            bindings = <
+            &trans  &trans  &trans    &trans    &trans                                                                                   &trans  &trans  &trans     &trans           &trans
+            &trans  &trans  &trans    &trans    &trans    &trans                                                              &trans     &trans  &trans  &trans     &trans           &trans
+            &trans  &none   &kp HOME  &kp UP    &kp END   &kp PG_UP                                                           &kp COLON  &kp N7  &kp N8  &kp N9     &kp KP_PLUS      &none
+            &trans  &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_DN                                                           &kp DOT    &kp N4  &kp N5  &kp N6     &kp KP_MINUS     &none
+            &trans  &none   &none     &none     &none     &none   &trans      &trans      &trans  &trans  &trans  &trans      &kp N0     &kp N1  &kp N2  &kp N3     &kp KP_MULTIPLY  &none
+            &trans  &none   &none     &none     &none             &trans      &trans      &trans  &trans  &trans  &trans                 &none   &none   &kp EQUAL  &kp KP_DIVIDE    &none
+            >;
+         };
 
         macro_layer {
            // ------------------------------------------------------------------------------
