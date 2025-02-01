@@ -38,8 +38,8 @@
 #define DOVRAK        2
 #define DOVRAK_SWITCH 3
 #define DOVRAK_LOWER  4
-#define UTIL          5
-#define LOWER         6
+#define LOWER         5
+#define UTIL          6
 #define MACRO         7
 #define MAGIC         8
 //#define FACTORY_TEST 8
