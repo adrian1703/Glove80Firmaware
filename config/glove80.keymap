@@ -38,10 +38,8 @@
 #define DOVRAK        2
 #define DOVRAK_SWITCH 3
 #define DOVRAK_LOWER  4
-#define LOWER         5
-#define UTIL          6
-#define MACRO         7
-#define MAGIC         8
+#define UTIL          5
+#define MAGIC         6
 //#define FACTORY_TEST 8
 
 &mt {
@@ -188,12 +186,12 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT |   | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |   | UP    | DOWN  |       |        | PGDN    |
 
             bindings = <
-            &tog UTIL      &tog 1   &tog 3      &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
-            &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
-            &kp ESC        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &kp TAB        &none    &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &tog DOVRAK    &none    &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &mo DOVRAK &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &tog UTIL      &tog QWERTZ &tog DOVRAK_SWITCH &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &none          &kp N1      &kp N2             &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
+            &kp ESC        &none       &none              &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
+            &kp TAB        &none       &none              &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
+            &tog DOVRAK    &none       &none              &none       &none       &none   &kp LSHFT   &kp LCTRL   &mo DOVRAK &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
+            &magic MAGIC 0 &kp HOME    &kp END            &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 
@@ -269,19 +267,6 @@
           >;
         };
 
-
-
-        lower_layer {
-            bindings = <
-            &trans      &trans      &trans      &trans      &trans                                                                                 &trans      &trans      &trans      &trans      &trans
-            &trans      &trans      &trans      &trans      &trans             &trans                                                      &trans  &trans      &trans      &trans      &trans      D11
-            &trans      D1          D2          D3          D4                 D5                                                          D6      D7          D8          D9          D10         D12
-            &trans      &trans      &trans      &trans      &trans             &trans                                                      &trans  &trans      &trans      &trans      &trans      D13
-            &trans      &trans      &trans      &trans      &trans             &trans  &trans  &trans  &tog LOWER  &trans  &trans  &trans  &trans  &trans      &trans      &trans      &trans      &trans
-            &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
-            >;
-        };
-
          util_layer {
             // -----------------------------------------------------------------------------------------------------
             // |   |   |   |   |   |                                                           |   |   |   |   |   |
@@ -299,24 +284,6 @@
             &trans  &none   &none     &none     &none             &trans      &trans      &trans  &trans  &trans  &trans                 &none   &none   &kp EQUAL  &kp KP_DIVIDE    &none
             >;
          };
-
-        macro_layer {
-           // ------------------------------------------------------------------------------
-           // |    |   |   |   |   |                                   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           bindings = <
-           &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-           >;
-        };
 
         magic_layer {
             bindings = <
