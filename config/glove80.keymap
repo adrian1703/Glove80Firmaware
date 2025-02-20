@@ -16,7 +16,7 @@
 #define D1 &mt PIPE EXCLAMATION                   // ! when tapped, | when  held
 #define D2 &mt AMPS DOLLAR                        // $ when tapped, & when  held
 #define D3 &mt EQUAL DOT                          // . when tapped, = when  held
-#define D4 &mt COLON SEMI                         // ; when tapped, : when  held
+#define D4 &mt SEMI COLON                         // : when tapped, ; when  held
 #define D5 &mt UNDERSCORE COMMA                   // , when tapped, _ when  held
 #define D6 &mt SINGLE_QUOTE DOUBLE_QUOTES         // ' when tapped, " when  held
 #define D7 &mt LESS_THAN LEFT_BRACE               // { when tapped, < when  held
@@ -77,7 +77,7 @@
         S1: S1   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EXCLAMATION>       , <&kp PIPE>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S2: S2   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOLLAR>            , <&kp AMPS>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S3: S3   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOT>               , <&kp EQUAL>           ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        S4: S4   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp SEMI>              , <&kp COLON>           ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        S4: S4   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COLON>             , <&kp SEMI>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S5: S5   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>             , <&kp UNDERSCORE>      ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S6: S6   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOUBLE_QUOTES>     , <&kp SINGLE_QUOTE>    ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S7: S7   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACE>        , <&kp LESS_THAN>       ; mods = <(MOD_LSFT|MOD_RSFT)>; };
