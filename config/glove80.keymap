@@ -30,8 +30,6 @@
 #define D15 &mt SLASH KP_MINUS                    // - when tapped, / when  held
 #define D16 &kp KP_SLASH                          // / when tapped
 #define D17 &kp BACKSLASH                         // \ when tapped
-!$.:,
-,=.:$
 
 // layers
 #define DEFAULT       0
