@@ -13,11 +13,11 @@
 
 #define HYPER LC(LS(LG(LALT)))
 
-#define D1 &mt PIPE EXCLAMATION                   // ! when tapped, | when  held
-#define D2 &mt AMPS DOLLAR                        // $ when tapped, & when  held
-#define D3 &mt EQUAL DOT                          // . when tapped, = when  held
+#define D1 &mt UNDERSCORE COMMA                   // , when tapped, _ when  held
+#define D2 &mt PIPE EQUAL                         // = when tapped, | when  held
+#define D3 &mt EXCLAMATION DOT                    // . when tapped, ! when  held
 #define D4 &mt SEMI COLON                         // : when tapped, ; when  held
-#define D5 &mt UNDERSCORE COMMA                   // , when tapped, _ when  held
+#define D5 &mt AMPS DOLLAR                        // $ when tapped, & when  held
 #define D6 &mt SINGLE_QUOTE DOUBLE_QUOTES         // ' when tapped, " when  held
 #define D7 &mt LESS_THAN LEFT_BRACE               // { when tapped, < when  held
 #define D8 &mt LEFT_BRACKET LEFT_PARENTHESIS      // ) when tapped, ] when  held
@@ -30,7 +30,8 @@
 #define D15 &mt SLASH KP_MINUS                    // - when tapped, / when  held
 #define D16 &kp KP_SLASH                          // / when tapped
 #define D17 &kp BACKSLASH                         // \ when tapped
-
+!$.:,
+,=.:$
 
 // layers
 #define DEFAULT       0
@@ -74,11 +75,11 @@
                     mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        S1: S1   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EXCLAMATION>       , <&kp PIPE>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        S2: S2   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOLLAR>            , <&kp AMPS>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        S3: S3   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOT>               , <&kp EQUAL>           ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        S1: S1   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>             , <&kp UNDERSCORE>      ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        S2: S2   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EQUAL>             , <&kp PIPE>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        S3: S3   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOT>               , <&kp EXCLAMATION>     ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S4: S4   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COLON>             , <&kp SEMI>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        S5: S5   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>             , <&kp UNDERSCORE>      ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        S5: S5   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOLLAR>            , <&kp AMPS>            ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S6: S6   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOUBLE_QUOTES>     , <&kp SINGLE_QUOTE>    ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S7: S7   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACE>        , <&kp LESS_THAN>       ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S8: S8   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_PARENTHESIS>  , <&kp LEFT_BRACKET>    ; mods = <(MOD_LSFT|MOD_RSFT)>; };
