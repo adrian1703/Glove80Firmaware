@@ -170,6 +170,14 @@
                 <D16>,
                 <D17>;
          };
+         default_layers: default_layers {
+                      compatible = "zmk,behavior-macro";
+                      #binding-cells = <0>;
+                      bindings
+                        = <&macro_tap tog QWERTZ>
+                        , <&macro_tap tog DOVRAK>
+                        , <&macro_tap tog DOVRAK_SWITCH>
+                  };
     };
 
     keymap {
@@ -185,12 +193,12 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT |   | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |   | UP    | DOWN  |       |        | PGDN    |
 
             bindings = <
-            &tog UTIL      &tog QWERTZ &tog DOVRAK_SWITCH &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
-            &none          &kp N1      &kp N2             &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
-            &kp ESC        &none       &none              &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &kp TAB        &none       &none              &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &tog DOVRAK    &none       &none              &none       &none       &none   &kp LSHFT   &kp LCTRL   &mo DOVRAK &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME    &kp END            &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &tog UTIL      &default_layers &none      &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &none          &kp N1          &kp N2     &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
+            &kp ESC        &none           &none      &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
+            &kp TAB        &none           &none      &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
+            &tog DOVRAK    &none           &none      &none       &none       &none   &kp LSHFT   &kp LCTRL   &mo DOVRAK &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
+            &magic MAGIC 0 &kp HOME        &kp END    &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 
