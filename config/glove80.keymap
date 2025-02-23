@@ -177,6 +177,7 @@
                         = <&macro_tap tog QWERTZ>
                         , <&macro_tap tog DOVRAK>
                         , <&macro_tap tog DOVRAK_SWITCH>
+                        ;
                   };
     };
 
