@@ -273,7 +273,7 @@
            &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
            &trans      &kp LC(LS(A))    &kp LC(D)         &kp LC(S)         &trans   &trans                                                             &kp LC(F4)         &trans           D16              D17           &trans         &trans
            &kp CAPS    &kp LC(LS(BSPC)) &kp LC(Z)         &kp LC(C)         &trans   &kp LG(LS(S))                                                      &trans             &trans           &kp LC(LS(F10))  &trans        &trans         &trans
-           &caps_word  &kp B            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &kp W              &kp X            &kp V            &kp Q         &kp Z          &trans
+           &caps_word  &kp B            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &kp B              &kp X            &kp V            &kp Q         &kp Z          &trans
            &trans      &trans           &trans            &kp DOWN          &kp UP              &kp SPACE &kp RET   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
           >;
         };
@@ -303,19 +303,19 @@
            D13         D12         D10         D9          D8                         D7                                                                    D6      D5                  D4          D3          D2          D1
            &trans      &kp S       &kp N       &kp T       &kp H                      &kp D                                                                 &kp I   &kp U               &kp E       &kp O       &kp A       D13
            &trans      &kp L       &kp R       &kp C       &mo DOVRAK_LOWER_INVERTED  &kp F   &trans      &trans      &trans   &trans  &trans    &trans     &kp M   &mo DOVRAK_LOWER    &kp Y       &kp P       &kp W       &trans
-           &trans      D15         D14         &kp DOWN    &kp UP                             &kp SPACE   &kp RET     &trans   &trans  &kp DEL   &kp BSPC           &kp RIGHT           &kp LEFT    D14         D15         &trans
+           &trans      D15         D14         &kp UP      &kp DOWN                           &trans      &trans      &trans   &trans  &trans    &trans             &kp RIGHT           &kp LEFT    D14         D15         &trans
           >;
         };
 
         dovrak_base_layer_2_inverted {
 
            bindings = <
-           &trans      &trans           &trans            &trans            &trans                                                                           &trans  &trans  &trans  &trans  &trans
-           &trans      &trans           &trans            &trans            &trans   &trans                                                          &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp Q            D16               D17               &trans   &kp LC(F4)                                                      &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp G            &kp X             &kp LC(LS(F10))   &trans   &kp LG(LS(S))                                                   &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp Z            &kp B             &kp V             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &trans           &trans            &kp DOWN          &kp UP              &kp SPACE &kp RET   &trans  &trans  &trans  &kp TAB          &trans  &trans  &trans  &trans  &trans
+           &trans      &trans           &trans            &trans            &trans                                                                       &trans  &trans  &trans  &trans  &trans
+           &trans      &trans           &trans            &trans            &trans   &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
+           &trans      &kp Q            D16               D17               &trans   &kp LC(F4)                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans      &kp G            &kp X             &kp LC(LS(F10))   &trans   &kp LG(LS(S))                                               &trans  &trans  &trans  &trans  &trans  &trans
+           &trans      &kp Z            &kp B             &kp V             &none    &kp LC(V)  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans      &trans           &trans            &kp DOWN          &kp UP              &trans  &trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
           >;
         };
 
