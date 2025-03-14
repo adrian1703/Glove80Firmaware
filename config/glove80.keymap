@@ -307,7 +307,7 @@
           >;
         };
 
-        dovrak_base_layer_inverted {
+        dovrak_base_layer_2_inverted {
 
            bindings = <
            &trans      &trans           &trans            &trans            &trans                                                                           &trans  &trans  &trans  &trans  &trans
