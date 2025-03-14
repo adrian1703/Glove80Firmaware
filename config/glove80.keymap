@@ -273,7 +273,7 @@
            &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
            &trans      &kp LC(LS(A))    &kp LC(D)         &kp LC(S)         &trans   &trans                                                             &kp LC(F4)         &trans           D16              D17           &trans         &trans
            &kp CAPS    &kp LC(LS(BSPC)) &kp LC(Z)         &kp LC(C)         &trans   &kp LG(LS(S))                                                      &trans             &trans           &kp LC(LS(F10))  &trans        &trans         &trans
-           &caps_word  &kp B            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &kp B              &kp X            &kp V            &kp Q         &kp Z          &trans
+           &caps_word  &kp B            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &kp W              &kp X            &kp V            &kp Q         &kp Z          &trans
            &trans      &trans           &trans            &kp DOWN          &kp UP              &kp SPACE &kp RET   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
           >;
         };
