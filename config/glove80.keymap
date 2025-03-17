@@ -287,12 +287,12 @@
            // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
            // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
            bindings = <
-           &trans                &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &tog DOVRAK_INVERTED  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           &trans                &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans
+           &trans                &trans  &trans  &trans  &trans  &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans
+           &trans                &trans  &trans  &trans  &trans  &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans
+           &trans                &trans  &trans  &trans  &trans  &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans
+           &mo DOVRAK_INVERTED   &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans                &trans  &trans  &trans  &trans          &trans  &kp SPACE  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
            >;
         };
 
@@ -314,8 +314,8 @@
            &trans      &trans           &trans            &trans     &trans   &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
            &trans      &trans           D16               D17        &trans   &kp LC(LS(F10))                                                &trans  &trans  &trans  &trans  &trans  &trans
            &trans      &kp LC(X)        &kp LC(Z)         &kp LC(C)  &trans   &kp LG(LS(S))                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp Z            &kp B             &kp V      &none    &kp LC(V)  &kp LC(F) &kp LC(R) &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp Q            &kp G             &kp X      &trans              &kp SPACE &kp RET   &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           &trans      &kp X            &kp B             &kp G      &none    &kp LC(V)  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans      &kp Q            &kp V             &kp Z      &trans              &kp DEL   &kp RET   &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
           >;
         };
 
