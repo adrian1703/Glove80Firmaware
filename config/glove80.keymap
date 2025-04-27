@@ -212,7 +212,7 @@
             // |  =    |     |     |     |     |     |                          |      |       |       |     |       |  -  |
             // |       |  Q  |  W  |  E  |  R  |  T  |                          |  Y   |   U   |   I   |  O  |   P   |  \  |
             // |       |  A  |  S  |  D  |  F  |  G  |                          |  H   |   J   |   K   |  L  |   ;   |  '  |
-            // |   `   |  Z  |  X  |  C  |  V  |  B  |  |   |   |   |   |   |   |  N   |   M   |   ,   |  .  |   /   |     |
+            // |       |  Z  |  X  |  C  |  V  |  B  |  |   |   |   |   |   |   |  N   |   M   |   ,   |  .  |   /   |     |
             // |       |     |     |     |     |     |  |   |   |   |   |   |   |      |       |       |  [  |   ]   |     |
 
             bindings = <
@@ -250,14 +250,14 @@
            // |        |     |     |     |     |     |                           |     |     |     |     |     | ^ ~ |
            // |        | = | | $ & | .   | ; : | , _ |                           | " ' | { < | ( [ | ) ] | } > | ? ! |
            // |        | A   | O   | E   | U   | I   |                           | D   | H   | T   | N   | S   | # ` |
-           // |        | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
+           // |  V     | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
            // |        |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
            &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
            &trans      D1          D2          D3          D4                 D5                                                      D6      D7          D8          D9          D10         D12
-           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       D13
-           &trans      &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp S   &kp H       &kp T       &kp N       &kp D       D13
+           &kp V       &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
            &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
           >;
         };
