@@ -290,8 +290,8 @@
              bindings = <
            &trans      &trans           &trans            &trans            &trans                                                                                         &trans           &trans           &trans        &trans         &trans
            &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
-           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &trans                                                             &kp LC(F4)         &kp BSPC         D16              D17           &kp DEL        &trans
-           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LG(LS(S))                                                      &trans             &kp SPACE        &kp LC(LS(F10))  &trans        &kp RET        &trans
+           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &trans                                                             &kp LC(F4)         &none            D16              D17           &none          &trans
+           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LG(LS(S))                                                      &none              &none            &kp LC(LS(F10))  &none         &none          &trans
            &caps_word  &kp B            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &kp B              &kp X            &kp V            &kp Q         &kp Z          &trans
            &trans      &trans           &kp UP            &kp DOWN          &none               &kp SPACE &kp RET   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
           >;
