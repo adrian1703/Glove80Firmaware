@@ -33,8 +33,8 @@
 
 // layers
 #define DEFAULT                0
-#define DOVRAK_LEFTHAND        1
-#define DOVRAK                 2
+#define DOVRAK                 1
+#define DOVRAK_ENGRAM          2
 #define DOVRAK_LOWER           3
 #define DOVRAK_INVERTED        4
 #define DOVRAK_LOWER_INVERTED  5
@@ -53,7 +53,7 @@
 // 8
 // 9
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
 };
 
 / {
@@ -100,12 +100,39 @@
         S14: S14 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_PLUS>           , <&kp ASTERISK>        ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S15: S15 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_MINUS>          , <&kp SLASH>           ; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
-        C1: C1     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_PARENTHESIS>  , <&C1A>                ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
-        C1A: C1A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACKET>      , <&C1B>                ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
-        C1B: C1B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACE>        , <&kp LESS_THAN>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
+        // S7 & S8 ([{<
+        C1:  C1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_PARENTHESIS>   , <&C1A>              ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C1A: C1A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACKET>       , <&C1B>              ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C1B: C1B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACE>         , <&kp LESS_THAN>     ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
+        // S9 & S10 )]}>
+        C2:  C2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp RIGHT_PARENTHESIS>  , <&C2A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C2A: C2A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp RIGHT_BRACKET>      , <&C2B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C2B: C2B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp RIGHT_BRACE>        , <&kp GREATER_THAN> ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
+        // ^~#
+        C3:  C3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp CARET>              , <&C3A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C3A: C3A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp TILDE>              , <&C3B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C3B: C3B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp HASH>               , <&kp HASH>         ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
+        // !?&|
+        C4:  C4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EXCLAMATION>        , <&C4A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C4A: C4A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp QUESTION>           , <&C4B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C4B: C4B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp AMPS>               , <&kp PIPE>         ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
+        // .=,_
+        C5:  C5    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOT>                , <&C5A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C5A: C5A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EQUAL>              , <&C5B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C5B: C5B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>              , <&kp UNDERSCORE>   ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
+
+        // :;$
+        C6:  C6    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp SEMI>               , <&C6A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C6A: C6A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COLON>              , <&C6B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C6B: C6B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOLLAR>             , <&kp DOLLAR>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
+
+        // "'`#
+        C7:  C7    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOUBLE_QUOTES>      , <&C7A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C7A: C7A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp SINGLE_QUOTE>       , <&C7B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C7B: C7B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GRAVE>              , <&kp HASH>         ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
 
         magic: magic_hold_tap {
@@ -190,7 +217,7 @@
                       #binding-cells = <0>;
                       bindings
                         = <&tog DOVRAK>
-//                        , <&tog DOVRAK_SWITCH>
+                        , <&tog DOVRAK_ENGRAM>
                         ;
                   };
     };
@@ -208,50 +235,40 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT |   | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |   | UP    | DOWN  |       |        | PGDN    |
 
             bindings = <
-            &tog UTIL      &default_layers &none       &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
-            &none          &kp N1          &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
-            &kp ESC        &none           &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &kp TAB        &none           &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &none          &none           &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &none
-            &magic MAGIC 0 &kp HOME        &kp LEFT    &kp RIGHT   &kp END             &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp PG_UP  &kp UP         &kp DOWN       &kp PG_DN      &none
+            &kp LC(C)      &kp LC(V)       &kp LS(INS)  &kp INS     &mt F2 F1                                                                                      &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &none          &kp N1          &kp N2       &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
+            &kp ESC        &none           &none        &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
+            &kp TAB        &none           &none        &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
+            &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &none
+            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &none
             >;
-        };
-        
-        dovrak_inverted_switch { // unused
-           // ------------------------------------------------------------------------------
-           // |    |   |   |   |   |                                   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           bindings = <
-           &trans                &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans  &trans                                                   &trans  &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans  &trans                                                   &trans  &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans  &trans                                                   &trans  &trans  &trans  &trans  &trans  &trans
-           &mo DOVRAK_INVERTED   &trans  &trans  &trans  &trans  &trans  &trans  &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans                &trans  &trans  &trans  &trans          &trans  &trans &kp SPACE &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-           >;
         };
 
         dovrak_base_layer {
-           // ----------------------------------------------------------------------------------------------------
-           // |        |     |     |     |     |                                       |     |     |     |     |     |
-           // |        |     |     |     |     |     |                           |     |     |     |     |     | ^ ~ |
-           // |        | = | | $ & | .   | ; : | , _ |                           | " ' | { < | ( [ | ) ] | } > | ? ! |
-           // |        | A   | O   | E   | U   | I   |                           | D   | H   | T   | N   | S   | # ` |
-           // |  V     | Q   | P   | Y   |     | X   |   |   |   |   |   |   |   | F   | G   | C   | R   | L   |     |
-           // |        |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
+
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
-           &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &S11
-           &trans      &S1         &S2         &S3         &S4                &S5                                                     &S6     &S7         &C1         &S9         &S10        &S12
-           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &S13
-           &kp V       &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &S14
-           &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &S15
+           &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &kp Q
+           &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp B   &kp J       &C1         &C2         &kp K       &kp Z
+           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &kp X
+           &kp V       &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &S14        &S15        &trans
           >;
         };
+
+        dovrak_engramm_rows {
+
+           bindings = <
+           &trans  &trans  &trans       &trans        &trans                                                                          &trans        &trans        &trans      &trans  &trans
+           &trans  &trans  &trans       &trans        &trans        &trans                                                    &trans  &trans        &trans        &trans      &trans  &trans
+           &trans  &trans  &trans       &trans        &trans        &trans                                                    &trans  &trans        &trans        &trans      &trans  &trans
+           &trans  &trans  &mt LALT O   &mt LCTRL E   &mt LSHFT U   &mt ESC I                                                 &trans  &mt LSHFT H   &mt LCTRL T   &mt LALT N  &trans  &trans
+           &trans  &trans  &trans       &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans      &trans  &trans
+           &trans  &trans  &trans       &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans        &trans      &trans  &trans
+           >;
+        };
+
+
 
         dovrak_base_layer_2 {
            // ----------------------------------------------------------------------------------------------------
@@ -264,9 +281,9 @@
              bindings = <
            &trans      &trans           &trans            &trans            &trans                                                                                         &trans           &trans           &trans        &trans         &trans
            &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
-           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &trans                                                             &kp LC(F4)         &none            D16              D17           &none          &trans
-           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LG(LS(S))                                                      &none              &none            &kp LC(LS(F10))  &none         &none          &trans
-           &caps_word  &kp B            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &kp B              &kp X            &kp V            &kp Q         &kp Z          &trans
+           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17           &none          &trans
+           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &none              &none            &kp LC(LS(F10))  &none         &none          &trans
+           &caps_word  &none            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &none            &none         &none          &trans
            &trans      &trans           &kp UP            &kp DOWN          &none               &kp SPACE &kp RET   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
           >;
         };
@@ -307,19 +324,19 @@
             &trans  &trans  &trans    &trans    &trans    &trans                                                              &trans     &trans  &trans  &trans     &trans           &trans
             &trans  &none   &kp HOME  &kp UP    &kp END   &kp PG_UP                                                           &kp COLON  &kp N7  &kp N8  &kp N9     &kp KP_PLUS      &none
             &trans  &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_DN                                                           &kp DOT    &kp N4  &kp N5  &kp N6     &kp KP_MINUS     &none
-            &trans  &none   &none     &none     &none     &none   &trans      &trans      &trans  &trans  &trans  &trans      &kp N0     &kp N1  &kp N2  &kp N3     &kp KP_MULTIPLY  &none
+            &trans  &none   &none     &none     &kp RALT  &none   &trans      &trans      &trans  &trans  &trans  &trans      &kp N0     &kp N1  &kp N2  &kp N3     &kp KP_MULTIPLY  &none
             &trans  &none   &none     &none     &none             &trans      &trans      &trans  &trans  &trans  &trans                 &none   &none   &kp EQUAL  &kp KP_DIVIDE    &none
             >;
          };
 
         magic_layer {
             bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
-            &none             &tog 1              &tog 2          &tog 3          &tog 4          &tog 5                                                                               &tog 6     &tog 7     &tog 8     &tog 9     &tog 1      &none
-            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
-            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &none
+            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none         &none           &none      &none      &bt BT_CLR_ALL
+            &none             &tog 1              &tog 2          &tog 3          &tog 4          &tog 5                                                                               &tog 6     &tog 7        &tog 8          &tog 9     &tog 1     &none
+            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP    &kp C_NEXT &kp C_PREV &none
+            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &kp K_APP  &tog UTIL     &default_layers &none      &none      &bootloader
+            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none         &none           &none      &none      &sys_reset
+            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none         &none           &none      &none      &none
             >;
         };
         factory_test_layer {
