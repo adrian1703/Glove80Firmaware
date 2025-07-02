@@ -100,9 +100,9 @@
         S14: S14 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_PLUS>           , <&kp ASTERISK>        ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S15: S15 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_MINUS>          , <&kp SLASH>           ; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
-        C1: C1   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_PARENTHESIS>  , <&C2>                 ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
-        C2: C2   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACKET>      , <&C3>                 ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                                    MOD_LALT|MOD_RALT)>; };
-        C3: C3   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACE>        , <&kp LESS_THAN>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                                        };
+        C1: C1     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_PARENTHESIS>  , <&C1A>                ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C1A: C1A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACKET>      , <&C1B>                ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
+        C1B: C1B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACE>        , <&kp LESS_THAN>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
 
 
