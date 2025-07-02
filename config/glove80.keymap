@@ -331,12 +331,12 @@
 
         magic_layer {
             bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none         &none           &none      &none      &bt BT_CLR_ALL
-            &none             &tog 1              &tog 2          &tog 3          &tog 4          &tog 5                                                                               &tog 6     &tog 7        &tog 8          &tog 9     &tog 1     &none
-            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP    &kp C_NEXT &kp C_PREV &none
-            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &kp K_APP  &tog UTIL     &default_layers &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none         &none           &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none         &none           &none      &none      &none
+            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none         &none              &none      &none      &bt BT_CLR_ALL
+            &none             &tog 1              &tog 2          &tog 3          &tog 4          &tog 5                                                                               &tog 6     &tog 7        &tog 8             &tog 9     &tog 1     &none
+            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP       &kp C_NEXT &kp C_PREV &none
+            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &kp K_APP  &tog UTIL     &tog DOVRAK_ENGRAM &none      &none      &bootloader
+            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none         &default_layers    &none      &none      &sys_reset
+            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none         &none              &none      &none      &none
             >;
         };
         factory_test_layer {
