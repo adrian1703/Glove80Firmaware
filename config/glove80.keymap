@@ -35,10 +35,10 @@
 #define DEFAULT                0
 #define DOVRAK                 1
 #define DOVRAK_ENGRAM          2
-#define DOVRAK_LOWER           3
-#define DOVRAK_INVERTED        4
-#define DOVRAK_LOWER_INVERTED  5
-#define UTIL                   6
+#define DOVRAK_INVERTED        3
+#define DOVRAK_LOWER_INVERTED  4
+#define UTIL                   5
+#define MACRO_LAYER           6
 #define MAGIC                  7
 //#define FACTORY_TEST 8
 
@@ -285,7 +285,7 @@
            &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &kp Q
            &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp B   &kp J       &C1         &C2         &kp K       &kp Z
            &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &kp X
-           &kp V       &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &kp V       &kp W       &kp P       &kp Y       &mo MACRO_LAYER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
            &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &S14        &S15        &trans
           >;
         };
@@ -300,26 +300,6 @@
            &trans  &trans  &trans        &trans         &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &trans         &trans       &trans  &trans
            &trans  &trans  &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans  &trans
            >;
-        };
-
-
-
-        dovrak_base_layer_2 {
-           // ----------------------------------------------------------------------------------------------------
-           // |    |        |           |        |   |                                         |        |           |      |     |     |
-           // |    |        |           |        |   |   |                           |         |        |           |      |     |     |
-           // |    | actions| dupli     | save   |   |   |                           | crtl F4 |        |  /        |  \   |     |     |
-           // |    | l-edit | undo      | copy   |   |   |                           |         |        | run       |format| ß   |     |
-           // |    | crtl x |  J        |  K     |   |ins|   |   |   |   |   |   |   | B       | X      | V         | Q    | Z   |     |
-           // |    | ä Ä    | ö Ö       | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |      |     |     |
-             bindings = <
-           &trans      &trans           &trans            &trans            &trans                                                                                         &trans           &trans           &trans        &trans         &trans
-           &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
-           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17           &none          &trans
-           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &none              &none            &kp LC(LS(F10))  &none         &none          &trans
-           &caps_word  &none            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &none            &none         &none          &trans
-           &trans      &trans           &kp UP            &kp DOWN          &none               &kp SPACE &kp RET   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
-          >;
         };
 
         dovrak_base_layer_inverted {
@@ -345,32 +325,50 @@
           >;
         };
 
-         util_layer {
-            // -----------------------------------------------------------------------------------------------------
-            // |   |   |   |   |   |                                                           |   |   |   |   |   |
-            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-            // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-            // |   |   |   |   |   |   | LSHFT |          |   | |   |              | RSHFT |   |   |   |   |   |   |
-            // |   |   |   |   |   |   |       | DEL      |   | |   | CRTL-Z Enter |       |   |   |   |   |   |   |
-            bindings = <
-            &trans  &trans  &trans    &trans    &trans                                                                                   &trans  &trans  &trans     &trans           &trans
-            &trans  &trans  &trans    &trans    &trans    &trans                                                              &trans     &trans  &trans  &trans     &trans           &trans
-            &trans  &none   &kp HOME  &kp UP    &kp END   &kp PG_UP                                                           &kp COLON  &kp N7  &kp N8  &kp N9     &kp KP_PLUS      &none
-            &trans  &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_DN                                                           &kp DOT    &kp N4  &kp N5  &kp N6     &kp KP_MINUS     &none
-            &trans  &none   &none     &none     &kp RALT  &none   &trans      &trans      &trans  &trans  &trans  &trans      &kp N0     &kp N1  &kp N2  &kp N3     &kp KP_MULTIPLY  &none
-            &trans  &none   &none     &none     &none             &trans      &trans      &trans  &trans  &trans  &trans                 &none   &none   &kp EQUAL  &kp KP_DIVIDE    &none
-            >;
-         };
+        util_layer {
+           // -----------------------------------------------------------------------------------------------------
+           // |   |   |   |   |   |                                                           |   |   |   |   |   |
+           // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
+           // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
+           // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
+           // |   |   |   |   |   |   | LSHFT |          |   | |   |              | RSHFT |   |   |   |   |   |   |
+           // |   |   |   |   |   |   |       | DEL      |   | |   | CRTL-Z Enter |       |   |   |   |   |   |   |
+           bindings = <
+           &trans  &trans  &trans    &trans    &trans                                                                                       &trans  &trans  &trans     &trans           &trans
+           &trans  &trans  &trans    &trans    &trans            &trans                                                          &trans     &trans  &trans  &trans     &trans           &trans
+           &trans  &none   &kp HOME  &kp UP    &kp END           &kp PG_UP                                                       &kp COLON  &kp N7  &kp N8  &kp N9     &kp KP_PLUS      &none
+           &trans  &none   &kp LEFT  &kp DOWN  &kp RIGHT         &kp PG_DN                                                       &kp DOT    &kp N4  &kp N5  &kp N6     &kp KP_MINUS     &none
+           &trans  &none   &none     &none     &mo MACRO_LAYER   &kp RALT  &trans    &trans  &trans  &trans  &trans  &trans      &kp N0     &kp N1  &kp N2  &kp N3     &kp KP_MULTIPLY  &none
+           &trans  &none   &none     &none     &none                       &trans    &trans  &trans  &trans  &trans  &trans                 &none   &none   &kp EQUAL  &kp KP_DIVIDE    &none
+           >;
+        };
+
+        macro_layer {
+           // ----------------------------------------------------------------------------------------------------
+           // |    |        |           |        |   |                                         |        |           |      |     |     |
+           // |    |        |           |        |   |   |                           |         |        |           |      |     |     |
+           // |    | actions| dupli     | save   |   |   |                           | crtl F4 |        |  /        |  \   |     |     |
+           // |    | l-edit | undo      | copy   |   |   |                           |         |        | run       |format| ß   |     |
+           // |    | crtl x |  J        |  K     |   |ins|   |   |   |   |   |   |   | B       | X      | V         | Q    | Z   |     |
+           // |    | ä Ä    | ö Ö       | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |      |     |     |
+             bindings = <
+           &trans      &trans           &trans            &trans            &trans                                                                                         &trans           &trans           &trans        &trans         &trans
+           &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
+           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17           &none          &trans
+           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &none              &none            &kp LC(LS(F10))  &none         &none          &trans
+           &caps_word  &none            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &none            &none         &none          &trans
+           &trans      &trans           &kp UP            &kp DOWN          &none               &kp SPACE &kp RET   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
+          >;
+        };
 
         magic_layer {
             bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none         &none              &none      &none      &bt BT_CLR_ALL
-            &none             &tog 1              &tog 2          &tog 3          &tog 4          &tog 5                                                                               &tog 6     &tog 7        &tog 8             &tog 9     &tog 1     &none
-            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP       &kp C_NEXT &kp C_PREV &none
-            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &kp K_APP  &tog UTIL     &tog DOVRAK_ENGRAM &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none         &default_layers    &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none         &none              &none      &none      &none
+            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none            &none           &none      &none      &bt BT_CLR_ALL
+            &none             &tog 1              &tog 2          &tog 3          &tog 4          &tog 5                                                                               &tog 6     &tog 7           &tog 8          &tog 9     &tog 1     &none
+            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &kp C_MUTE &kp C_VOL_DN     &kp C_VOL_UP    &kp C_NEXT &kp C_PREV &none
+            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &kp K_APP  &tog UTIL        &none           &none      &none      &bootloader
+            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &default_layers  &none           &none      &none      &sys_reset
+            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none            &none           &none      &none      &none
             >;
         };
         factory_test_layer {
