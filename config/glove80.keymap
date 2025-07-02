@@ -33,17 +33,25 @@
 
 // layers
 #define DEFAULT                0
-#define QWERTZ                 1
-#define DOVRAK_LEFTHAND        2
-#define DOVRAK                 3
-#define DOVRAK_SWITCH          4
-#define DOVRAK_LOWER           5
-#define DOVRAK_INVERTED        6
-#define DOVRAK_LOWER_INVERTED  7
-#define UTIL                   8
-#define MAGIC                  9
+#define DOVRAK_LEFTHAND        1
+#define DOVRAK                 2
+#define DOVRAK_LOWER           3
+#define DOVRAK_INVERTED        4
+#define DOVRAK_LOWER_INVERTED  5
+#define UTIL                   6
+#define MAGIC                  7
 //#define FACTORY_TEST 8
 
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
 &mt {
     tapping-term-ms = <200>;
 };
@@ -91,6 +99,10 @@
         S13: S13 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp HASH>              , <&kp GRAVE>           ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S14: S14 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_PLUS>           , <&kp ASTERISK>        ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         S15: S15 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_MINUS>          , <&kp SLASH>           ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+
+        C1: C1   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_PARENTHESIS>  , <&C2>                 ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C2: C2   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACKET>      , <&C3>                 ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
+        C3: C3   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT_BRACE>        , <&kp LESS_THAN>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                                        };
 
 
 
@@ -177,9 +189,8 @@
                       compatible = "zmk,behavior-macro";
                       #binding-cells = <0>;
                       bindings
-                        = <&tog QWERTZ>
-                        , <&tog DOVRAK>
-                        , <&tog DOVRAK_SWITCH>
+                        = <&tog DOVRAK>
+//                        , <&tog DOVRAK_SWITCH>
                         ;
                   };
     };
@@ -201,30 +212,10 @@
             &none          &kp N1          &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none           &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
             &kp TAB        &none           &none       &none       &none       &none                                                                      &none   &none      &none          &none          &none          &none
-            &none          &none           &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME        &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &none          &none           &none       &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT   &none   &none      &none          &none          &none          &none
+            &magic MAGIC 0 &kp HOME        &kp LEFT    &kp RIGHT   &kp END             &kp BSPC    &kp DEL     &kp LALT   &kp LALT  &kp RET   &kp SPACE           &kp PG_UP  &kp UP         &kp DOWN       &kp PG_DN      &none
             >;
         };
-
-        qwertz_layer {
-            // -------------------------------------------------------------------------------------------------------------
-            // |       |     |     |     |     |                                       |       |       |     |       |     |
-            // |  =    |     |     |     |     |     |                          |      |       |       |     |       |  -  |
-            // |       |  Q  |  W  |  E  |  R  |  T  |                          |  Y   |   U   |   I   |  O  |   P   |  \  |
-            // |       |  A  |  S  |  D  |  F  |  G  |                          |  H   |   J   |   K   |  L  |   ;   |  '  |
-            // |       |  Z  |  X  |  C  |  V  |  B  |  |   |   |   |   |   |   |  N   |   M   |   ,   |  .  |   /   |     |
-            // |       |     |     |     |     |     |  |   |   |   |   |   |   |      |       |       |  [  |   ]   |     |
-
-            bindings = <
-            &trans      &trans      &trans      &trans      &trans                                                                      &trans      &trans      &trans      &trans      &trans
-            &kp EQUAL   &trans      &trans      &trans      &trans      &trans                                                  &trans  &trans      &trans      &trans      &trans      &kp MINUS
-            &trans      &kp Q       &kp W       &kp E       &kp R       &kp T                                                   &kp Z   &kp U       &kp I       &kp O       &kp P       &kp BSLH
-            &trans      &kp A       &kp S       &kp D       &kp F       &kp G                                                   &kp H   &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
-            &trans      &kp Y       &kp X       &kp C       &kp V       &kp B   &trans  &trans  &trans  &trans  &trans  &trans  &kp N   &kp M       &kp COMMA   &kp DOT     &kp FSLH    &trans
-            &trans      &trans      &trans      &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &kp LBKT    &kp RBKT    &trans
-            >;
-        };
-        
         
         dovrak_inverted_switch { // unused
            // ------------------------------------------------------------------------------
@@ -254,31 +245,14 @@
            // |        |     |     |     |     |     |   |   |   |   |   |   |   |     |     |     | + * | - / |     |
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
-           &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      D11
-           &trans      D1          D2          D3          D4                 D5                                                      D6      D7          D8          D9          D10         D12
-           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       D13
-           &kp V       &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
-           &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      D14         D15         &trans
+           &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &S11
+           &trans      &S1         &S2         &S3         &S4                &S5                                                     &S6     &S7         &C1         &S9         &S10        &S12
+           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &S13
+           &kp V       &kp W       &kp P       &kp Y       &mo DOVRAK_LOWER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &S14
+           &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &trans      &trans      &S15
           >;
         };
 
-        dovrak_switch {
-           // ------------------------------------------------------------------------------
-           // |    |   |   |   |   |                                   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-           bindings = <
-           &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &S11
-           &trans  &S1     &S2     &S3     &S4     &S5                                                     &S6     &S7     &S8     &S9     &S10    &S12
-           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &S13
-           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &S14    &S15    &trans
-           >;
-        };
         dovrak_base_layer_2 {
            // ----------------------------------------------------------------------------------------------------
            // |    |        |           |        |   |                                         |        |           |      |     |     |
