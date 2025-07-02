@@ -283,9 +283,9 @@
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
            &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &kp Q
-           &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp B   &kp J       &C1         &C2         &kp K       &kp Z
+           &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp B   &kp K       &C1         &C2         &kp J       &kp Z
            &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &kp X
-           &kp V       &kp W       &kp P       &kp Y       &mo MACRO_LAYER   &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &kp V       &kp W       &kp P       &kp Y       &mo MACRO_LAYER    &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
            &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &S14        &S15        &trans
           >;
         };
