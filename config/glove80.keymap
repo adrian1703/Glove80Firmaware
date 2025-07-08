@@ -297,7 +297,7 @@
            &trans  &trans  &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans  &trans
            &trans  &trans  &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans  &trans
            &trans  &trans  &hml LALT O   &hml LCTRL E   &hml LSHFT U   &hml ESC I                                                 &trans  &hmr LSHFT H   &hmr LCTRL T   &hmr LALT N  &trans  &trans
-           &trans  &trans  &trans        &trans         &hml HYPER Y   &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &trans  &trans
+           &trans  &trans  &trans        &hml HYPER Y   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &trans  &trans
            &trans  &trans  &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans  &trans
            >;
         };
