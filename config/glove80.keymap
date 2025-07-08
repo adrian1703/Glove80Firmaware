@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define HYPER LC(LS(LALT)))
+#define HYPER LC(LS(LALT))
 
 #define D1 &mt UNDERSCORE COMMA                   // , when tapped, _ when  held
 #define D2 &mt PIPE EQUAL                         // = when tapped, | when  held
