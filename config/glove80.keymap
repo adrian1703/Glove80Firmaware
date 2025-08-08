@@ -46,6 +46,7 @@
 #define UTIL                   5
 #define MACRO_LAYER            6
 #define MAGIC                  7
+#define UMLAUTE                8
 //#define FACTORY_TEST 8
 
 // 0
@@ -109,6 +110,18 @@
             hold-trigger-on-release;
         };
 
+       hmr2: home_row_mod_right2 {
+           compatible = "zmk,behavior-hold-tap";
+           #binding-cells = <2>;
+           flavor = "balanced";
+           require-prior-idle-ms = <150>;
+           tapping-term-ms = <180>;
+           quick-tap-ms = <125>;
+           bindings = <&mo>, <&kp>;
+           hold-trigger-key-positions = <0>,<1>,<2>,<3>,<4>,<10>,<11>,<12>,<13>,<14>,<15>,<22>,<23>,<24>,<25>,<26>,<27>,<34>,<35>,<36>,<37>,<38>,<39>,<46>,<47>,<48>,<49>,<50>,<51>,<64>,<65>,<66>,<67>,<68>;// List of keys on the left side of the keyboard
+           hold-trigger-on-release;
+       };
+
 //        ld_dov: tap_dance_1 {
 //            compatible = "zmk,behavior-tap-dance";
 //            label = "LAYER_TAP_DANCE2";
@@ -164,16 +177,21 @@
         C5A: C5A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EQUAL>              , <&C5B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
         C5B: C5B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>              , <&kp UNDERSCORE>   ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
-        // :;$
+        // :;
         C6:  C6    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp SEMI>               , <&C6A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
         C6A: C6A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COLON>              , <&C6B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
-        C6B: C6B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOLLAR>             , <&kp DOLLAR>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
+        C6B: C6B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp Percent>            , <&kp Percent>      ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
         // "'`#
         C7:  C7    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOUBLE_QUOTES>      , <&C7A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
         C7A: C7A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp SINGLE_QUOTE>       , <&C7B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
-        C7B: C7B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GRAVE>              , <&kp HASH>         ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
+        C7B: C7B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GRAVE>              , <&kp DOLLAR>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
+        // a A
+        F1:  F1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ae>   , <&macro_AE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        F2:  F2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        F3:  F3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        F4:  F4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -186,6 +204,105 @@
     };
 
     macros {
+        // ä (U+00E4)
+        macro_ae: macro_ae {
+            compatible = "zmk,behavior-macro";
+            label = "DE_AE";
+            bindings = <
+                &macro_press &kp LC(LS(U))
+                &macro_release
+                &macro_wait 5
+                &macro_tap &kp E
+                &macro_tap &kp N4
+                &macro_tap &kp SPACE
+            >;
+        };
+
+        // ö (U+00F6)
+        macro_oe: macro_oe {
+            compatible = "zmk,behavior-macro";
+            label = "DE_OE";
+            bindings = <
+                &macro_press &kp LC(LS(U))
+                &macro_release
+                &macro_wait 5
+                &macro_tap &kp F
+                &macro_tap &kp N6
+                &macro_tap &kp SPACE
+            >;
+        };
+
+        // ü (U+00FC)
+        macro_ue: macro_ue {
+            compatible = "zmk,behavior-macro";
+            label = "DE_UE";
+            bindings = <
+                &macro_press &kp LC(LS(U))
+                &macro_release
+                &macro_wait 5
+                &macro_tap &kp F
+                &macro_tap &kp C
+                &macro_tap &kp SPACE
+            >;
+        };
+
+        // Ä (U+00C4)
+        macro_AE: macro_AE {
+            compatible = "zmk,behavior-macro";
+            label = "DE_AE_UPPER";
+            bindings = <
+                &macro_press &kp LC(LS(U))
+                &macro_release
+                &macro_wait 5
+                &macro_tap &kp C
+                &macro_tap &kp N4
+                &macro_tap &kp SPACE
+            >;
+        };
+
+        // Ö (U+00D6)
+        macro_OE: macro_OE {
+            compatible = "zmk,behavior-macro";
+            label = "DE_OE_UPPER";
+            bindings = <
+                &macro_press &kp LC(LS(U))
+                &macro_release
+                &macro_wait 5
+                &macro_tap &kp D
+                &macro_tap &kp N6
+                &macro_tap &kp SPACE
+            >;
+        };
+
+        // Ü (U+00DC)
+        macro_UE: macro_UE {
+            compatible = "zmk,behavior-macro";
+            label = "DE_UE_UPPER";
+            bindings = <
+                &macro_press &kp LC(LS(U))
+                &macro_release
+                &macro_wait 5
+                &macro_tap &kp D
+                &macro_tap &kp C
+                &macro_tap &kp SPACE
+            >;
+        };
+
+        // ß (U+00DF)
+        macro_sz: macro_sz {
+            compatible = "zmk,behavior-macro";
+            label = "DE_SZ";
+            bindings = <
+                &macro_press &kp LC(LS(U))
+                &macro_release
+                &macro_wait 5
+                &macro_tap &kp D
+                &macro_tap &kp F
+                &macro_tap &kp SPACE
+            >;
+        };
+
+
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
@@ -299,12 +416,12 @@
         dovrak_engramm_rows {
 
            bindings = <
-           &trans  &trans  &trans        &trans         &trans                                                                            &trans         &trans         &trans       &trans  &trans
-           &trans  &trans  &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans  &trans
-           &trans  &trans  &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans  &trans
-           &trans  &trans  &hml LALT O   &hml LCTRL E   &hml LSHFT U   &hml ESC I                                                 &trans  &hmr LSHFT H   &hmr LCTRL T   &hmr LALT N  &trans  &trans
-           &trans  &trans  &trans        &hml HYPER Y   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &trans  &trans
-           &trans  &trans  &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans  &trans
+           &trans  &trans  &trans        &trans         &trans                                                                            &trans         &trans         &trans       &trans           &trans
+           &trans  &trans  &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &trans
+           &trans  &trans  &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &trans
+           &trans  &trans  &hml LALT O   &hml LCTRL E   &hml LSHFT U   &hml ESC I                                                 &trans  &hmr LSHFT H   &hmr LCTRL T   &hmr LALT N  &hmr LGUI S      &trans
+           &trans  &trans  &trans        &hml HYPER Y   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &hmr2 UMLAUTE L  &trans
+           &trans  &trans  &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans           &trans
            >;
         };
 
@@ -377,6 +494,25 @@
             &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none            &none           &none      &none      &none
             >;
         };
+
+        umlaute_layer {
+           // ------------------------------------------------------------------------------
+           // |    |   |   |   |   |                                   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           bindings = <
+           &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &F1     &F2     &trans  &F3     &F4                                                     &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           >;
+        };
+
         factory_test_layer {
             bindings = <
             &kp N0   &kp N6   &kp N2   &kp N8   &kp N4                                                                              &kp N4   &kp N8   &kp N2   &kp N6   &kp N0
@@ -407,6 +543,7 @@
            &trans  &trans         &trans         &trans         &trans                  &mkp MB1 &mkp MB2 &mkp MB5 &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
            >;
         };
+
             // Template for new layer
         trans_layer {
            // ------------------------------------------------------------------------------
