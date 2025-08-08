@@ -181,85 +181,78 @@
         // ä (U+00E4)
         macro_ae: macro_ae {
             compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LC(LS(U))
-                &macro_release
-                &macro_tap &kp E
-                &macro_tap &kp N4
-                &macro_tap &kp SPACE
-            >;
+            bindings
+              = <&macro_press &kp LC(LS(U))>,
+                <&macro_release>,
+                <&macro_tap &kp E>,
+                <&macro_tap &kp N4>,
+                <&macro_tap &kp SPACE>;
         };
 
         // ö (U+00F6)
         macro_oe: macro_oe {
             compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LC(LS(U))
-                &macro_release
-                &macro_tap &kp F
-                &macro_tap &kp N6
-                &macro_tap &kp SPACE
-            >;
+            bindings
+              = <&macro_press &kp LC(LS(U))>,
+                <&macro_release>,
+                <&macro_tap &kp F>,
+                <&macro_tap &kp N6>,
+                <&macro_tap &kp SPACE>;
         };
 
         // ü (U+00FC)
         macro_ue: macro_ue {
             compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LC(LS(U))
-                &macro_release
-                &macro_tap &kp F
-                &macro_tap &kp C
-                &macro_tap &kp SPACE
-            >;
+            bindings
+              = <&macro_press &kp LC(LS(U))>,
+                <&macro_release>,
+                <&macro_tap &kp F>,
+                <&macro_tap &kp C>,
+                <&macro_tap &kp SPACE>;
         };
 
         // Ä (U+00C4)
         macro_AE: macro_AE {
             compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LC(LS(U))
-                &macro_release
-                &macro_tap &kp C
-                &macro_tap &kp N4
-                &macro_tap &kp SPACE
-            >;
+            bindings
+              = <&macro_press &kp LC(LS(U))>,
+                <&macro_release>,
+                <&macro_tap &kp C>,
+                <&macro_tap &kp N4>,
+                <&macro_tap &kp SPACE>;
         };
 
         // Ö (U+00D6)
         macro_OE: macro_OE {
             compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LC(LS(U))
-                &macro_release
-                &macro_tap &kp D
-                &macro_tap &kp N6
-                &macro_tap &kp SPACE
-            >;
+            bindings
+              = <&macro_press &kp LC(LS(U))>,
+                <&macro_release>,
+                <&macro_tap &kp D>,
+                <&macro_tap &kp N6>,
+                <&macro_tap &kp SPACE>;
         };
 
         // Ü (U+00DC)
         macro_UE: macro_UE {
             compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LC(LS(U))
-                &macro_release
-                &macro_tap &kp D
-                &macro_tap &kp C
-                &macro_tap &kp SPACE
-            >;
+            bindings
+              = <&macro_press &kp LC(LS(U))>,
+                <&macro_release>,
+                <&macro_tap &kp D>,
+                <&macro_tap &kp C>,
+                <&macro_tap &kp SPACE>;
         };
 
         // ß (U+00DF)
         macro_sz: macro_sz {
             compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LC(LS(U))
-                &macro_release
-                &macro_tap &kp D
-                &macro_tap &kp F
-                &macro_tap &kp SPACE
-            >;
+            bindings
+              = <&macro_press &kp LC(LS(U))>,
+                <&macro_release>,
+                <&macro_tap &kp D>,
+                <&macro_tap &kp F>,
+                <&macro_tap &kp SPACE>;
         };
 
 
