@@ -161,14 +161,10 @@
         C7B: C7B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GRAVE>              , <&kp DOLLAR>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
         // a A
-        // F1:  F1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ae>   , <&macro_AE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        // F2:  F2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        // F3:  F3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        // F4:  F4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        F1:  F1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        F2:  F2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        F3:  F3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        F4:  F4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G1:  G1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ae>   , <&macro_AE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G2:  G2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G3:  G3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G4:  G4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -455,7 +451,7 @@
            &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
            &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
            &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &F1     &F2     &trans  &F3     &F4                                                     &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &G1     &G2     &trans  &G3     &G4                                                     &trans  &trans  &trans  &trans  &trans  &trans
            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
            &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
            >;
