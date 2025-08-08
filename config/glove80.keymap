@@ -18,6 +18,9 @@
 #define COPY  &kp LC(C)
 #define PASTE &kp LC(V)
 
+#define D16 &kp KP_SLASH                          // / when tapped
+#define D17 &kp BACKSLASH                         // \ when tapped
+
 // layers
 #define DEFAULT                0
 #define DOVRAK                 1
