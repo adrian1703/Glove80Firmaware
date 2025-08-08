@@ -162,10 +162,10 @@
         C7B: C7B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GRAVE>              , <&kp DOLLAR>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
         // a A
-        G1:  G1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ae>   , <&macro_AE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        G2:  G2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        G3:  G3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        G4:  G4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G1:  G1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ae>   , <&macro_AEE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G2:  G2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OEE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G3:  G3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UEE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        G4:  G4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>    ; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -218,7 +218,7 @@
         };
 
         // Ä (U+00C4)
-        macro_AE: macro_AE {
+        macro_AEE: macro_AEE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -231,7 +231,7 @@
         };
 
         // Ö (U+00D6)
-        macro_OE: macro_OE {
+        macro_OEE: macro_OEE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -244,7 +244,7 @@
         };
 
         // Ü (U+00DC)
-        macro_UE: macro_UE {
+        macro_UEE: macro_UEE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
