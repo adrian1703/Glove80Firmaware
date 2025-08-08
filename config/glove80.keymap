@@ -177,12 +177,12 @@
         C5A: C5A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EQUAL>              , <&C5B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
         C5B: C5B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>              , <&kp UNDERSCORE>   ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
-        // :;
+        // :;%%
         C6:  C6    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp SEMI>               , <&C6A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
         C6A: C6A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COLON>              , <&C6B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
         C6B: C6B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PERCENT>            , <&kp PERCENT>      ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
-        // "'`#
+        // "'`
         C7:  C7    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOUBLE_QUOTES>      , <&C7A>             ; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; };
         C7A: C7A   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp SINGLE_QUOTE>       , <&C7B>             ; mods = <(                  MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>; keep-mods = <(                  MOD_LALT|MOD_RALT)>; };
         C7B: C7B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GRAVE>              , <&kp DOLLAR>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
@@ -207,7 +207,6 @@
         // ä (U+00E4)
         macro_ae: macro_ae {
             compatible = "zmk,behavior-macro";
-            label = "DE_AE";
             bindings = <
                 &macro_press &kp LC(LS(U))
                 &macro_release
@@ -221,7 +220,6 @@
         // ö (U+00F6)
         macro_oe: macro_oe {
             compatible = "zmk,behavior-macro";
-            label = "DE_OE";
             bindings = <
                 &macro_press &kp LC(LS(U))
                 &macro_release
@@ -235,7 +233,6 @@
         // ü (U+00FC)
         macro_ue: macro_ue {
             compatible = "zmk,behavior-macro";
-            label = "DE_UE";
             bindings = <
                 &macro_press &kp LC(LS(U))
                 &macro_release
@@ -249,7 +246,6 @@
         // Ä (U+00C4)
         macro_AE: macro_AE {
             compatible = "zmk,behavior-macro";
-            label = "DE_AE_UPPER";
             bindings = <
                 &macro_press &kp LC(LS(U))
                 &macro_release
@@ -263,7 +259,6 @@
         // Ö (U+00D6)
         macro_OE: macro_OE {
             compatible = "zmk,behavior-macro";
-            label = "DE_OE_UPPER";
             bindings = <
                 &macro_press &kp LC(LS(U))
                 &macro_release
@@ -277,7 +272,6 @@
         // Ü (U+00DC)
         macro_UE: macro_UE {
             compatible = "zmk,behavior-macro";
-            label = "DE_UE_UPPER";
             bindings = <
                 &macro_press &kp LC(LS(U))
                 &macro_release
@@ -291,7 +285,6 @@
         // ß (U+00DF)
         macro_sz: macro_sz {
             compatible = "zmk,behavior-macro";
-            label = "DE_SZ";
             bindings = <
                 &macro_press &kp LC(LS(U))
                 &macro_release
@@ -346,29 +339,7 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
         };
-         //DOVRAK KEYS
-         DTEST: DTEST {
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             bindings =
-                <D1>,
-                <D2>,
-                <D3>,
-                <D4>,
-                <D5>,
-                <D6>,
-                <D7>,
-                <D8>,
-                <D9>,
-                <D10>,
-                <D11>,
-                <D12>,
-                <D13>,
-                <D14>,
-                <D15>,
-                <D16>,
-                <D17>;
-         };
+
          default_layers: default_layers {
                       compatible = "zmk,behavior-macro";
                       #binding-cells = <0>;
