@@ -22,12 +22,10 @@
 #define DEFAULT                0
 #define DOVRAK                 1
 #define DOVRAK_ENGRAM          2
-#define DOVRAK_INVERTED        3
-#define DOVRAK_LOWER_INVERTED  4
-#define UTIL                   5
-#define MACRO_LAYER            6
-#define MAGIC                  7
-#define UMLAUTE                8
+#define UTIL                   3
+#define MACRO_LAYER            4
+#define MAGIC                  5
+#define UMLAUTE                6
 //#define FACTORY_TEST 8
 
 // 0
@@ -367,29 +365,6 @@
            &trans  &trans  &trans        &hml HYPER Y   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &hmr2 UMLAUTE L  &trans
            &trans  &trans  &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans           &trans
            >;
-        };
-
-        dovrak_base_layer_inverted {
-           bindings = <
-           &hmr F4 F3   &mt F6 F5   &mt F8 F7   &mt F10 F9  &mt F12 F11                                                                               &trans  &trans  &trans  &trans  &trans
-           D11         &kp N0      &kp N9      &kp N8      &kp N7                     &kp N6                                                 &trans  &trans  &trans  &trans  &trans  &trans
-           D13         D12         D10         D9          D8                         D7                                                     &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp S       &kp N       &kp T       &kp H                      &kp D                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp L       &kp R       &kp C       &mo DOVRAK_LOWER_INVERTED  &kp F   &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      D15         D14         &kp UP      &kp DOWN                           &trans &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-          >;
-        };
-
-        dovrak_base_layer_2_inverted {
-
-           bindings = <
-           &trans      &trans           &trans            &trans     &trans                                                                          &trans  &trans  &trans  &trans  &trans
-           &trans      &trans           &trans            &trans     &trans   &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &trans           D16               D17        &trans   &kp LC(LS(F10))                                                &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp LC(X)        &kp LC(Z)         &kp LC(C)  &trans   &kp LG(LS(S))                                                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp X            &kp B             &kp G      &none    &kp LC(V)  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans      &kp Q            &kp V             &kp Z      &trans              &trans    &trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-          >;
         };
 
         util_layer {
