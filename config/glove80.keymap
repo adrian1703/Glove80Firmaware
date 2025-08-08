@@ -14,25 +14,6 @@
 
 #define HYPER LC(LA(LSHFT))
 
-#define D1 &mt UNDERSCORE COMMA                   // , when tapped, _ when  held
-#define D2 &mt PIPE EQUAL                         // = when tapped, | when  held
-#define D3 &mt EXCLAMATION DOT                    // . when tapped, ! when  held
-#define D4 &mt SEMI COLON                         // : when tapped, ; when  held
-#define D5 &mt AMPS DOLLAR                        // $ when tapped, & when  held
-#define D6 &mt SINGLE_QUOTE DOUBLE_QUOTES         // ' when tapped, " when  held
-#define D7 &mt LESS_THAN LEFT_BRACE               // { when tapped, < when  held
-#define D8 &mt LEFT_BRACKET LEFT_PARENTHESIS      // ) when tapped, ] when  held
-#define D9 &mt RIGHT_BRACKET RIGHT_PARENTHESIS    // ( when tapped, [ when  held
-#define D10 &mt GREATER_THAN RIGHT_BRACE          // } when tapped, > when  held
-#define D11 &mt CARET TILDE                       // ^ when tapped, ~ when  held
-#define D12 &mt EXCLAMATION QUESTION              // ? when tapped, ! when  held
-#define D13 &mt GRAVE HASH                        // # when tapped, ` when  held
-#define D14 &mt ASTERISK KP_PLUS                  // + when tapped, * when  held
-#define D15 &mt SLASH KP_MINUS                    // - when tapped, / when  held
-#define D16 &kp KP_SLASH                          // / when tapped
-#define D17 &kp BACKSLASH                         // \ when tapped
-
-
 #define CUT   &kp LC(X)
 #define COPY  &kp LC(C)
 #define PASTE &kp LC(V)
@@ -122,14 +103,6 @@
            hold-trigger-on-release;
        };
 
-//        ld_dov: tap_dance_1 {
-//            compatible = "zmk,behavior-tap-dance";
-//            label = "LAYER_TAP_DANCE2";
-//            #binding-cells = <0>;
-//            tapping-term-ms = <200>;
-//            bindings = <&mo DOVRAK>, <&tog DOVRAK>;
-//        };
-
         S0: S0 {
                     compatible = "zmk,behavior-mod-morph";
                     #binding-cells = <0>;
@@ -188,10 +161,14 @@
         C7B: C7B   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GRAVE>              , <&kp DOLLAR>       ; mods = <(                                    MOD_LALT|MOD_RALT)>;                                                      };
 
         // a A
-        F1:  F1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ae>   , <&macro_AE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        F2:  F2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        F3:  F3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        F4:  F4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        // F1:  F1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ae>   , <&macro_AE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        // F2:  F2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        // F3:  F3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        // F4:  F4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        F1:  F1    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        F2:  F2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        F3:  F3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        F4:  F4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp a>   , <&kp a>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
