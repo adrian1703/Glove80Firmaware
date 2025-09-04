@@ -337,12 +337,12 @@
             // | MAGIC      | HOME| END | LEFT | RIGHT |   | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |   | UP    | DOWN  |       |        | PGDN    |
 
             bindings = <
-            &kp UP         &kp LC(C)       &kp LC(V)    &kp INS     &mt F2 F1                                                                                       &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
-            &kp DOWN       &kp N1          &kp N2       &kp N3      &kp N4      &kp N5                                                                      &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
-            &kp ESC        &none           &none        &none       &none       &none                                                                       &none   &none      &none          &none          &none          &none
-            &kp TAB        &none           &none        &none       &none       &none                                                                       &none   &none      &none          &none          &none          &none
-            &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp RCTRL  &kp RET &kp SPACE     &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT   &kp RET &kp RSHFT             &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &kp UP         &kp LC(C)       &kp LC(V)    &kp INS     &mt F2 F1                                                                                         &mt F4 F3  &mt F6 F5      &mt F8 F7      &mt F10 F9     &mt F12 F11
+            &kp DOWN       &kp N1          &kp N2       &kp N3      &kp N4      &kp N5                                                                        &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
+            &kp ESC        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
+            &kp TAB        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
+            &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI   &kp RET   &kp SPACE     &none   &none      &none          &none          &none          &kp PG_UP
+            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT   &kp RCTRL &kp RSHFT             &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 //        &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT
@@ -352,7 +352,7 @@
 
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
-           &none       &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &kp Q
+           &trans      &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &kp Q
            &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp B   &kp K       &C1         &C2         &kp J       &kp Z
            &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &kp X
            &kp V       &kp W       &kp P       &kp Y       &mo MACRO_LAYER    &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
