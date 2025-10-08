@@ -341,8 +341,8 @@
             &kp DOWN       &kp N1          &kp N2       &kp N3      &kp N4      &kp N5                                                                        &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
             &kp TAB        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
-            &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI   &kp RET   &kp SPACE     &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT   &kp RCTRL &kp RSHFT             &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI   &kp RSHFT   &kp RET     &none   &none      &none          &none          &none          &kp PG_UP
+            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT   &kp RCTRL   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 //        &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT
