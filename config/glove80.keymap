@@ -341,8 +341,8 @@
             &kp DOWN       &kp N1          &kp N2       &kp N3      &kp N4      &kp N5                                                                        &kp N6  &kp N7     &kp N8         &kp N9         &kp N0         &none
             &kp ESC        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
             &kp TAB        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
-            &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI   &kp RSHFT   &kp RET     &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp LALT   &kp RCTRL   &kp SPACE           &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI   &kp RSHFT   &kp DEL     &none   &none      &none          &none          &none          &kp PG_UP
+            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp SPACE   &kp RETC    &kp LALT   &kp LALT   &kp RCTRL   &kp BSPC            &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 //        &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT
@@ -352,10 +352,10 @@
 
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
-           &trans      &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &kp Q
-           &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp B   &kp K       &C1         &C2         &kp J       &kp Z
-           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp S       &kp X
-           &kp V       &kp W       &kp P       &kp Y       &mo MACRO_LAYER    &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp F   &kp G       &kp C       &kp R       &kp L       &trans
+           &trans      &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
+           &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp G   &kp K       &kp R       &kp F       &kp J       &trans
+           &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp B       &kp X
+           &kp V       &kp Z       &kp P       &kp Y       &mo MACRO_LAYER    &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp W   &kp S       &kp C       &kp L       &kp Q       &trans
            &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &S14        &S15        &trans
           >;
         };
@@ -403,8 +403,8 @@
            &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
            &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17           &none          &trans
            &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &none              &none            &kp LC(LS(F10))  &none         &none          &trans
-           &caps_word  &none            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &none            &none         &none          &trans
-           &trans      &trans           &kp UP            &kp DOWN          &none               &kp SPACE &kp RET   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
+           &caps_word  &none            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &C1              &C2           &none          &trans
+           &trans      &trans           &kp UP            &kp DOWN          &none               &kp BSPC    &kp DEL &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
           >;
         };
 
