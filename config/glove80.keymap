@@ -403,7 +403,7 @@
            &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
            &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17           &none          &trans
            &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &none              &none            &kp LC(LS(F10))  &none         &none          &trans
-           &caps_word  &none            &kp J             &kp K             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &C1              &C2           &none          &trans
+           &caps_word  &kp LC(W)        &C1               &C2               &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &C1              &C2           &none          &trans
            &trans      &trans           &kp UP            &kp DOWN          &none               &kp BSPC    &kp DEL &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
           >;
         };
