@@ -450,12 +450,12 @@
            // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
            // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
            bindings = <
-           &trans  &trans         &trans         &trans          &trans                                                                     &trans  &trans  &trans  &trans  &trans
-           &trans  &trans         &trans         &trans          &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans         &trans         &mmv MOVE_UP    &trans          CUT                                                        &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans         &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT COPY                                                       &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans         &msc SCRL_LEFT &msc SCRL_RIGHT &msc SCRL_UP    PASTE   &mkp MB3 &trans   &mkp MB4 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans         &trans         &trans          &msc SCRL_DOWN          &mkp MB1 &mkp MB2 &mkp MB5 &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           &trans  &trans     &trans         &trans          &trans                                                                             &trans  &trans  &trans  &trans  &trans
+           &trans  &trans     &trans         &trans          &trans          &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans     &trans         &mmv MOVE_UP    &trans          CUT                                                        &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans     &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT COPY                                                       &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans     &msc SCRL_LEFT &msc SCRL_RIGHT &msc SCRL_UP    PASTE   &mkp MB3 &trans   &mkp MB4 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans     &trans         &trans          &msc SCRL_DOWN          &mkp MB1 &mkp MB2 &mkp MB5 &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
            >;
         };
 
