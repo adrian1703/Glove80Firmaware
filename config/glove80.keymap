@@ -366,7 +366,7 @@
            bindings = <
            &trans  &trans      &trans        &trans         &trans                                                                            &trans         &trans         &trans       &trans           &trans
            &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &trans
-           &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &mo MOUSE
+           &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &tog MOUSE
            &trans  &hml LGUI A &hml LALT O   &hml LCTRL E   &hml LSHFT U   &hml ESC I                                                 &trans  &hmr LSHFT H   &hmr LCTRL T   &hmr LALT N  &hmr LGUI B      &trans
            &trans  &trans      &trans        &hml HYPER Y   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &hmr2 UMLAUTE Q  &trans
            &trans  &trans      &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans           &trans
