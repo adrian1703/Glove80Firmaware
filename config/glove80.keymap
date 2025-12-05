@@ -343,7 +343,7 @@
             &kp ESC        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
             &kp TAB        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
             &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI   &kp RSHFT   &kp DEL     &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp SPACE   &kp RET     &kp LALT   &kp LALT   &kp RCTRL   &kp BSPC            &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp SPACE   &kp RET     &kp LALT   &none      &mo MOUSE   &kp BSPC            &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 //        &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT
