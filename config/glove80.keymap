@@ -343,7 +343,7 @@
             &kp ESC        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
             &kp TAB        &none           &none        &none       &none       &none                                                                         &none   &none      &none          &none          &none          &none
             &none          &none           &none        &none       &none       &none   &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI   &kp RSHFT   &kp DEL     &none   &none      &none          &none          &none          &kp PG_UP
-            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp SPACE   &kp RET     &kp LALT   &none      &mo MOUSE   &kp BSPC            &kp UP     &kp DOWN       &none          &none          &kp PG_DN
+            &magic MAGIC 0 &kp HOME        &kp END      &kp LEFT    &kp RIGHT           &kp SPACE   &kp RET     &kp LALT   &mo MOUSE  &tog MOUSE  &kp BSPC            &kp UP     &kp DOWN       &none          &none          &kp PG_DN
             >;
         };
 //        &kp LSHFT   &kp LCTRL   &kp LGUI   &kp LGUI  &kp RCTRL &kp RSHFT
@@ -366,7 +366,7 @@
            bindings = <
            &trans  &trans      &trans        &trans         &trans                                                                            &trans         &trans         &trans       &trans           &trans
            &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &trans
-           &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &tog MOUSE
+           &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &trans
            &trans  &hml LGUI A &hml LALT O   &hml LCTRL E   &hml LSHFT U   &hml ESC I                                                 &trans  &hmr LSHFT H   &hmr LCTRL T   &hmr LALT N  &hmr LGUI B      &trans
            &trans  &trans      &trans        &hml HYPER Y   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &hmr2 UMLAUTE Q  &trans
            &trans  &trans      &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans           &trans
