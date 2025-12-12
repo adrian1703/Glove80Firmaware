@@ -24,13 +24,13 @@
 // layers
 #define DEFAULT                0
 #define DOVRAK                 1
-#define DOVRAK_ENGRAM          2
+#define MOD_LAYER              2
 #define UTIL                   3
 #define MACRO_LAYER            4
 #define MAGIC                  5
 #define UMLAUTE                6
 #define MOUSE                  7
-//#define FACTORY_TEST 8
+#define FKEYS                  8
 
 // 0
 // 1
@@ -320,7 +320,7 @@
                       #binding-cells = <0>;
                       bindings
                         = <&tog DOVRAK>
-                        , <&tog DOVRAK_ENGRAM>
+                        , <&tog MOD_LAYER>
                         ;
                   };
     };
@@ -361,7 +361,7 @@
           >;
         };
 
-        dovrak_engramm_rows {
+        mod_layer {
 
            bindings = <
            &trans  &trans      &trans        &trans         &trans                                                                            &trans         &trans         &trans       &trans           &trans
@@ -403,20 +403,20 @@
            &trans      &trans           &trans            &trans            &trans                                                                                         &trans           &trans           &trans        &trans         &trans
            &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
            &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17           &none          &trans
-           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &none              &none            &kp LC(LS(F10))  &none         &none          &trans
-           &caps_word  &kp LC(W)        &C1               &C2               &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &C1              &C2           &none          &trans
-           &trans      &trans           &kp UP            &kp DOWN          &none               &kp BSPC    &kp DEL &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
+           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &kp LC(LS(BSPC))   &none            &kp LC(LS(F10))  &none         &none          &trans
+           &caps_word  &kp LC(W)        &none             &none             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &C1              &C2           &none          &trans
+           &trans      &trans           &kp UP            &kp DOWN          &none               &kp BSPC  &kp DEL   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
           >;
         };
 
         magic_layer {
             bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none            &none           &none      &none      &bt BT_CLR_ALL
-            &none             &tog 1              &tog 2          &tog 3          &tog 4          &tog 5                                                                               &tog 6     &tog 7           &tog 8          &tog 9     &tog 1     &none
-            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &kp C_MUTE &kp C_VOL_DN     &kp C_VOL_UP    &kp C_NEXT &kp C_PREV &none
-            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &kp K_APP  &tog UTIL        &none           &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &default_layers  &none           &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none            &none           &none      &none      &none
+            &bt BT_CLR  &none           &none           &none           &none                                                                                  &none           &none        &none      &none      &bt BT_CLR_ALL
+            &none       &none           &none           &none           &none           &none                                                       &none      &none           &none        &none      &none      &none
+            &none       &rgb_ug RGB_SPI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                             &kp C_MUTE &kp C_VOL_DN    &kp C_VOL_UP &kp C_NEXT &kp C_PREV &none
+            &bootloader &rgb_ug RGB_SPD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                             &kp K_APP  &tog UTIL       &tog FKEYS   &none      &none      &bootloader
+            &sys_reset  &none           &none           &none           &none           &none           &bt_2 &bt_3 &none        &none &none &none  &none      &default_layers &none        &none      &none      &sys_reset
+            &none       &none           &none           &none           &none                           &bt_0 &bt_1 &out OUT_USB &none &none &none             &none           &none        &none      &none      &none
             >;
         };
 
@@ -459,7 +459,25 @@
            >;
         };
 
-            // Template for new layer
+        //F Key layer
+        trans_layer {
+           // ------------------------------------------------------------------------------
+           // |    |   |   |   |   |                                   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |                           |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           // |    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+           bindings = <
+           &trans  &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans   &trans
+           &kp F12 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                                                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+           &trans  &trans  &trans  &trans  &trans   &trans                                                  &trans  &trans  &trans  &trans  &trans   &trans
+           &trans  &trans  &trans  &trans  &trans   &trans                                                  &trans  &trans  &trans  &trans  &trans   &trans
+           &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+           &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans   &trans
+           >;
+        };
+        // Template for new layer
         trans_layer {
            // ------------------------------------------------------------------------------
            // |    |   |   |   |   |                                   |   |   |   |   |   |
