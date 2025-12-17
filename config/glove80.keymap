@@ -57,6 +57,7 @@
     tapping-term-ms = <200>;
 };
 
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -78,7 +79,8 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <180>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <5>,<6>,<7>,<8>,<9>,<16>,<17>,<18>,<19>,<20>,<21>,<28>,<29>,<30>,<31>,<32>,<33>,<40>,<41>,<42>,<43>,<44>,<45>,<59>,<60>,<61>,<62>,<63>,<75>,<76>,<77>,<78>,<79>; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <5>,<6>,<7>,<8>,<9>,<16>,<17>,<18>,<19>,<20>,<21>,<28>,<29>,<30>,<31>,<32>,<33>,<40>,<41>,<42>,<43>,<44>,<45>,<59>,<60>,<61>,<62>,<63>,<75>,<76>,<77>,<78>,<79>, // List of keys on the right side of the keyboard
+            <52>,<53>,<54>,<55>,<56>,<57>,<69>,<70>,<71>,<72>,<73>,<74>; //thumbs
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -89,7 +91,8 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <180>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0>,<1>,<2>,<3>,<4>,<10>,<11>,<12>,<13>,<14>,<15>,<22>,<23>,<24>,<25>,<26>,<27>,<34>,<35>,<36>,<37>,<38>,<39>,<46>,<47>,<48>,<49>,<50>,<51>,<64>,<65>,<66>,<67>,<68>;// List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <0>,<1>,<2>,<3>,<4>,<10>,<11>,<12>,<13>,<14>,<15>,<22>,<23>,<24>,<25>,<26>,<27>,<34>,<35>,<36>,<37>,<38>,<39>,<46>,<47>,<48>,<49>,<50>,<51>,<64>,<65>,<66>,<67>,<68>,// List of keys on the left side of the keyboard
+            <52>,<53>,<54>,<55>,<56>,<57>,<69>,<70>,<71>,<72>,<73>,<74>; //thumbs
             hold-trigger-on-release;
         };
 
