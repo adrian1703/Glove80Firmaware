@@ -17,6 +17,7 @@
 #define CUT   &kp LC(X)
 #define COPY  &kp LC(C)
 #define PASTE &kp LC(V)
+#define PASTE_INS &kp LS(INS)
 
 #define D16 &kp KP_SLASH                          // / when tapped
 #define D17 &kp BACKSLASH                         // \ when tapped
@@ -31,6 +32,13 @@
 #define UMLAUTE                6
 #define MOUSE                  7
 #define FKEYS                  8
+
+&mt {
+//    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+};
+//        #################################################  CUSTOM KEYS ################################################# //
+//        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  CUSTOM KEYS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // 0
 // 1
@@ -52,25 +60,11 @@
 // &64    &65    &66    &67    &68           &69    &70    &71    &72    &73    &74           &75    &76    &77    &78    &79
 // >;
 
-&mt {
-//    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-};
 
 
 / {
     behaviors {
-        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
-        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-        // unused atm
-        layer_td: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_DANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo DOVRAK>, <&tog DOVRAK>;
-        };
-
+//        #################################################  HOMEROW MODS #################################################  //
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -107,7 +101,8 @@
            hold-trigger-key-positions = <0>,<1>,<2>,<3>,<4>,<10>,<11>,<12>,<13>,<14>,<15>,<22>,<23>,<24>,<25>,<26>,<27>,<34>,<35>,<36>,<37>,<38>,<39>,<46>,<47>,<48>,<49>,<50>,<51>,<64>,<65>,<66>,<67>,<68>;// List of keys on the left side of the keyboard
            hold-trigger-on-release;
        };
-
+//        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  HOMEROW MODS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  //
+//        #################################################  CUSTOM KEYS ################################################# //
         S0: S0 {
                     compatible = "zmk,behavior-mod-morph";
                     #binding-cells = <0>;
@@ -170,6 +165,7 @@
         G2:  G2    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_oe>   , <&macro_OEE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         G3:  G3    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_ue>   , <&macro_UEE>   ; mods = <(MOD_LSFT|MOD_RSFT)>; };
         G4:  G4    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&macro_sz>   , <&macro_sz>    ; mods = <(MOD_LSFT|MOD_RSFT)>; };
+//        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  CUSTOM KEYS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -182,6 +178,7 @@
     };
 
     macros {
+//        #################################################  ASCII KEYS ################################################# //
         // ä (U+00E4)
         macro_ae: macro_ae {
             compatible = "zmk,behavior-macro";
@@ -272,8 +269,7 @@
               , <&macro_tap &kp SPACE>
               ;
         };
-
-
+//        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ASCII KEYS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
@@ -371,19 +367,12 @@
            &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &trans
            &trans  &trans      &trans        &trans         &trans         &trans                                                     &trans  &trans         &trans         &trans       &trans           &trans
            &trans  &hml LGUI A &hml LALT O   &hml LCTRL E   &hml LSHFT U   &hml ESC I                                                 &trans  &hmr LSHFT H   &hmr LCTRL T   &hmr LALT N  &hmr LGUI B      &trans
-           &trans  &trans      &trans        &hml HYPER Y   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &hmr2 UMLAUTE Q  &trans
+           &trans  &trans      &trans        &trans         &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans         &hmr HYPER C   &trans       &hmr2 UMLAUTE Q  &trans
            &trans  &trans      &trans        &trans         &trans                   &trans  &trans  &trans  &trans  &trans  &trans           &trans         &trans         &trans       &trans           &trans
            >;
         };
 
         util_layer {
-           // -----------------------------------------------------------------------------------------------------
-           // |   |   |   |   |   |                                                           |   |   |   |   |   |
-           // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-           // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-           // |   |   |   |   |   |   |                                                   |   |   |   |   |   |   |
-           // |   |   |   |   |   |   | LSHFT |          |   | |   |              | RSHFT |   |   |   |   |   |   |
-           // |   |   |   |   |   |   |       | DEL      |   | |   | CRTL-Z Enter |       |   |   |   |   |   |   |
            bindings = <
            &trans  &trans  &trans    &trans    &trans                                                                                       &trans  &trans  &trans     &trans           &trans
            &trans  &trans  &trans    &trans    &trans            &trans                                                          &trans     &trans  &trans  &trans     &trans           &trans
@@ -403,12 +392,12 @@
            // |    | crtl x |  J        |  K     |   |ins|   |   |   |   |   |   |   | B       | X      | V         | Q    | Z   |     |
            // |    | ä Ä    | ö Ö       | ü Ü    |   |   |   |   |   |   |   |   |   |         |        |           |      |     |     |
              bindings = <
-           &trans      &trans           &trans            &trans            &trans                                                                                         &trans           &trans           &trans        &trans         &trans
-           &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans        &trans         &trans
-           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17           &none          &trans
-           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LC(C)                                                          &kp LC(LS(BSPC))   &none            &kp LC(LS(F10))  &none         &none          &trans
-           &caps_word  &kp LC(W)        &none             &none             &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &C1              &C2           &none          &trans
-           &trans      &trans           &kp UP            &kp DOWN          &none               &kp BSPC  &kp DEL   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans        &trans         &trans
+           &trans      &trans           &trans            &trans            &trans                                                                                         &trans           &trans           &trans          &trans         &trans
+           &trans      &trans           &trans            &trans            &trans   &trans                                                             &trans             &trans           &trans           &trans          &trans         &trans
+           &trans      &kp LC(LS(BSPC)) &kp LC(D)         &kp LC(S)         &trans   &kp LG(LS(S))                                                      &kp LC(F4)         &none            D16              D17             &none          &trans
+           &kp CAPS    &kp LC(X)        &kp LC(Z)         &kp LC(C)         &trans   &kp LS(INS)                                                        &kp LC(LS(BSPC))   &kp LC(LS(F9))   &kp LC(LS(F10))  &kp LC(F5)      &none          &trans
+           &caps_word  &kp LC(W)        &kp LC(F)         &kp LC(R)         &none    &kp LC(V)  &kp LC(F) &kp LC(R) &kp LC(X)  &trans  &trans  &trans   &none              &none            &C1              &C2             &none          &trans
+           &trans      &trans           &kp UP            &kp DOWN          &none               &kp BSPC  &kp DEL   &trans     &trans  &trans  &kp TAB                     &trans           &trans           &trans          &trans         &trans
           >;
         };
 
