@@ -353,7 +353,7 @@
            bindings = <
            &trans      &trans      &trans      &trans      &trans                                                                             &trans      &trans      &trans      &trans      &trans
            &trans      &trans      &trans      &trans      &trans             &trans                                                  &trans  &trans      &trans      &trans      &trans      &trans
-           &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp G   &kp K       &kp R       &kp F       &kp J       &trans
+           &trans      &C3         &C4         &C5         &C6                &C7                                                     &kp G   &kp K       &kp R       &kp F       &kp J       &mo FKEYS
            &trans      &kp A       &kp O       &kp E       &kp U              &kp I                                                   &kp D   &kp H       &kp T       &kp N       &kp B       &kp X
            &kp V       &kp Z       &kp P       &kp Y       &mo MACRO_LAYER    &kp M   &trans  &trans  &trans  &trans  &trans  &trans  &kp W   &kp S       &kp C       &kp L       &kp Q       &trans
            &trans      &trans      &trans      &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans      &S14        &S15        &trans
